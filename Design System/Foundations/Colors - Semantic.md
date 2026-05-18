@@ -25,26 +25,26 @@ Apply the correct mode to every frame. Screens inherit the mode of their nearest
 
 Used for all typographic content: headings, body, labels, placeholders, links, status messages.
 
-| Token | Light | Dark | Primitive ref |
-|---|---|---|---|
-| `Text/Primary` | `#0D0D0D` | `#F2F2F2` | neutral/950 → neutral/50 |
-| `Text/Secondary` | `#262626` | `#E5E5E5` | neutral/850 → neutral/100 |
-| `Text/Tertiary` | `#4C4C4C` | `#CCCCCC` | neutral/700 → neutral/200 |
-| `Text/Disabled` | `#A6A6A6` | `#4C4C4C` | neutral/350 → neutral/700 |
-| `Text/Primary Inverse` | `#F2F2F2` | `#0D0D0D` | neutral/50 → neutral/950 |
-| `Text/Secondary Inverse` | `#E5E5E5` | `#262626` | neutral/100 → neutral/850 |
-| `Text/Tertiary Inverse` | `#D9D9D9` | `#595959` | neutral/150 → neutral/650 |
-| `Text/Primary Inverse Static` | `#F2F2F2` | `#F2F2F2` | neutral/50 (both) |
-| `Text/Link` | `#007AFF` | `#3395FF` | blue/500 → blue/400 |
-| `Text/Link Pressed` | `#004999` | `#66AFFF` | blue/700 → blue/300 |
-| `Text/Negative` | `#FF3B30` | `#FF3B30` | red/500 (both) |
-| `Text/Negative Pressed` | `#99231D` | `#FF8983` | red/700 → red/300 |
-| `Text/Positive` | `#2CA44A` | `#2CA44A` | green/500 (both) |
-| `Text/Warning` | `#96790D` | `#FACA15` | yellow/700 → yellow/500 |
-| `Text/Status Red` | `#FF3B30` | `#FF3B30` | red/500 (both) |
-| `Text/Status Green` | `#56B66E` | `#56B66E` | green/400 (both) |
-| `Text/Status Yellow` | `#FBD544` | `#FBD544` | yellow/400 (both) |
-| `Text/Status Blue` | `#007AFF` | `#007AFF` | blue/500 (both) |
+| Token                         | Light     | Dark      | Primitive ref             |
+| ----------------------------- | --------- | --------- | ------------------------- |
+| `Text/Primary`                | `#0D0D0D` | `#F2F2F2` | neutral/950 → neutral/50  |
+| `Text/Secondary`              | `#262626` | `#E5E5E5` | neutral/850 → neutral/100 |
+| `Text/Tertiary`               | `#4C4C4C` | `#CCCCCC` | neutral/700 → neutral/200 |
+| `Text/Disabled`               | `#A6A6A6` | `#4C4C4C` | neutral/350 → neutral/700 |
+| `Text/Primary Inverse`        | `#F2F2F2` | `#0D0D0D` | neutral/50 → neutral/950  |
+| `Text/Secondary Inverse`      | `#E5E5E5` | `#262626` | neutral/100 → neutral/850 |
+| `Text/Tertiary Inverse`       | `#D9D9D9` | `#595959` | neutral/150 → neutral/650 |
+| `Text/Primary Inverse Static` | `#F2F2F2` | `#F2F2F2` | neutral/50 (both)         |
+| `Text/Link`                   | `#007AFF` | `#3395FF` | blue/500 → blue/400       |
+| `Text/Link Pressed`           | `#004999` | `#66AFFF` | blue/700 → blue/300       |
+| `Text/Negative`               | `#FF3B30` | `#FF3B30` | red/500 (both)            |
+| `Text/Negative Pressed`       | `#99231D` | `#FF8983` | red/700 → red/300         |
+| `Text/Positive`               | `#2CA44A` | `#2CA44A` | green/500 (both)          |
+| `Text/Warning`                | `#96790D` | `#FACA15` | yellow/700 → yellow/500   |
+| `Text/Status Red`             | `#FF3B30` | `#FF3B30` | red/500 (both)            |
+| `Text/Status Green`           | `#56B66E` | `#56B66E` | green/400 (both)          |
+| `Text/Status Yellow`          | `#FBD544` | `#FBD544` | yellow/400 (both)         |
+| `Text/Status Blue`            | `#007AFF` | `#007AFF` | blue/500 (both)           |
 
 ### When to use — Text
 

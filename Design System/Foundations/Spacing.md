@@ -88,8 +88,8 @@ Both margin and gutter alias to `Space/L`, so column metrics shift in lockstep w
 
 ## Removed / renamed
 
-| Old | New | Reason |
-|---|---|---|
+| Old        | New               | Reason                                                                                        |
+| ---------- | ----------------- | --------------------------------------------------------------------------------------------- |
 | `Space/44` | `Space/TapTarget` | Numeric name didn't convey semantic intent. Token is currently a reserved rule, not used yet. |
 
 Back to [[Design System]] · [[Rules]].
