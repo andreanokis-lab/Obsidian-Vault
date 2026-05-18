@@ -7,6 +7,7 @@ Note: four different components share the name "Trailing" across the UIKit. This
 - **Component set node:** `535:669`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=535-669)
 - **Figma section:** `----- Image Content` → "Trailing"
+- **Figma documentation:** Section `1729:6238` "Trailing (Image Content) — Documentation" on the same page
 
 ---
 

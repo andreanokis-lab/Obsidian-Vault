@@ -5,6 +5,7 @@ Two-line text block used inside list rows — a primary label + optional helper 
 - **Component set node:** `448:2970`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=448-2970)
 - **Figma section:** `----- Content Row` → "Row Text"
+- **Figma documentation:** Section `1729:5970` "Row Text — Documentation" on the same page
 
 ---
 

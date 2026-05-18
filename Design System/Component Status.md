@@ -49,6 +49,12 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 
 | Component | Status | Figma Node | Note |
 |---|---|---|---|
+| Row Text | ✅ Built | `448:2970` | 2 Tone variants (Default, Destructive). Primary + helper text block for list rows. See [[Components/Row Text\|Row Text]]. |
+| Trailing (Content Row) | ✅ Built | `416:222` | 5 Types (Picker, Toggle, Segment, Trailing-Icon, Count). See [[Components/Trailing (Content Row)\|Trailing (Content Row)]]. |
+| Trailing (Action Section) | ✅ Built | `475:1102` | 3 Types (Icon, Text, Icon-chevron). See [[Components/Trailing (Action Section)\|Trailing (Action Section)]]. |
+| Trailing (Sheets) | ✅ Built | `442:10099` | 2 Types (Circle Button, Text Button). See [[Components/Trailing (Sheets)\|Trailing (Sheets)]]. |
+| Trailing (Image Content) | ✅ Built | `535:669` | 2 Status variants (Success, Error). See [[Components/Trailing (Image Content)\|Trailing (Image Content)]]. |
+| Leading (Sheets) | ✅ Built | `442:10216` | 2 Types (Circle Button, Text Button). Mirror of Trailing. See [[Components/Leading (Sheets)\|Leading (Sheets)]]. |
 | List Row | 📋 Planned | — | Needs: primary label, subtitle, leading icon, trailing chevron/action |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |

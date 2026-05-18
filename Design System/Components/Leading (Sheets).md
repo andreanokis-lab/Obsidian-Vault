@@ -5,6 +5,7 @@ Leading pill button used in a [[Sheet]] header — typically a Back/Close action
 - **Component set node:** `442:10216`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=442-10216)
 - **Figma section:** `----- Sheets` → "Leading"
+- **Figma documentation:** Section `1729:6193` "Leading (Sheets) — Documentation" on the same page
 
 ---
 
