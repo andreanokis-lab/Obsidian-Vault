@@ -61,6 +61,9 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Leaderboard Row | ✅ Built | `1297:250` | Rank + avatar + name + stats. For positions 4+. See [[Components/Leaderboard Row\|Leaderboard Row]]. |
 | File field | ✅ Built | `960:4667` | Thumbnail + filename + helper. For uploads / attachments. See [[Components/File field\|File field]]. |
 | Info row | ✅ Built | `342:4031` | Inline label with leading + trailing icons. Used inside Cards. See [[Components/Info row\|Info row]]. |
+| Card | ✅ Built | `389:2319` | 7 Role variants (Company, Invoices, Deposit Slip, Stops, Trip-Routes, Requests, Orders). See [[Components/Card\|Card]]. |
+| View | ✅ Built | `389:2245` | 2 Views (Basic, Extended) — payment / amount display block. See [[Components/View\|View]]. |
+| Range | ✅ Built | `379:716` | 2 State variants (Default, Disabled) — From / To range display. See [[Components/Range\|Range]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |

@@ -5,6 +5,7 @@ Two-label range display — "From" / "To" with an arrow between them. Used for d
 - **Component set node:** `379:716`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=379-716)
 - **Figma section:** `----- Card` → "Range"
+- **Figma documentation:** Section `1737:7166` "Range — Documentation" on the same page
 
 ---
 

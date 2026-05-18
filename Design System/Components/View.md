@@ -5,6 +5,7 @@ Payment / amount display block — large primary amount + supporting label, opti
 - **Component set node:** `389:2245`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=389-2245)
 - **Figma section:** `----- Card` → "View"
+- **Figma documentation:** Section `1737:7097` "View — Documentation" on the same page
 
 ---
 
