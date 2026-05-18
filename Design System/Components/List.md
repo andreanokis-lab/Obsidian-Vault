@@ -5,6 +5,7 @@ Generic list row — leading icon, [[Row Text]] block, optional progress bar, di
 - **Component set node:** `944:4339`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=944-4339)
 - **Figma section:** `----- Content Row` → "List"
+- **Figma documentation:** Section `1730:6350` "List — Documentation" on the same page
 
 ---
 

@@ -5,6 +5,7 @@ File attachment row — small image thumbnail + filename + optional helper text.
 - **Component node:** `960:4667`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=960-4667)
 - **Figma section:** `----- Content Row` → "File field"
+- **Figma documentation:** Section `1730:6750` "File field — Documentation" on the same page
 
 ---
 

@@ -55,7 +55,12 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Trailing (Sheets) | ✅ Built | `442:10099` | 2 Types (Circle Button, Text Button). See [[Components/Trailing (Sheets)\|Trailing (Sheets)]]. |
 | Trailing (Image Content) | ✅ Built | `535:669` | 2 Status variants (Success, Error). See [[Components/Trailing (Image Content)\|Trailing (Image Content)]]. |
 | Leading (Sheets) | ✅ Built | `442:10216` | 2 Types (Circle Button, Text Button). Mirror of Trailing. See [[Components/Leading (Sheets)\|Leading (Sheets)]]. |
-| List Row | 📋 Planned | — | Needs: primary label, subtitle, leading icon, trailing chevron/action |
+| List | ✅ Built | `944:4339` | 2 Views (List, Preview Row). Generic list row with Row Text + Trailing slot. See [[Components/List\|List]]. |
+| Content Row | ✅ Built | `1008:3542` | 7 variants × Receipts/Trackshop/Adj./Truck Service/Deposit slip with Long Press states. See [[Components/Content Row\|Content Row]]. |
+| List / Grid | ✅ Built | `939:4248` | Card-style grid tile with image + title + helper + progress. See [[Components/List Grid\|List / Grid]]. |
+| Leaderboard Row | ✅ Built | `1297:250` | Rank + avatar + name + stats. For positions 4+. See [[Components/Leaderboard Row\|Leaderboard Row]]. |
+| File field | ✅ Built | `960:4667` | Thumbnail + filename + helper. For uploads / attachments. See [[Components/File field\|File field]]. |
+| Info row | ✅ Built | `342:4031` | Inline label with leading + trailing icons. Used inside Cards. See [[Components/Info row\|Info row]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |

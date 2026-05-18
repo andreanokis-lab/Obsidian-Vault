@@ -7,6 +7,7 @@ For generic list rows without HaulEx semantics, use [[List]] instead.
 - **Component set node:** `1008:3542`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=1008-3542)
 - **Figma section:** `----- Content Row` → "Content Row"
+- **Figma documentation:** Section `1730:6487` "Content Row — Documentation" on the same page
 
 ---
 

@@ -5,6 +5,7 @@ Card-style grid tile — image + title + helper text + progress bar — designed
 - **Component node:** `939:4248`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=939-4248)
 - **Figma section:** `----- Content Row` → "List/Grid"
+- **Figma documentation:** Section `1730:6581` "List / Grid — Documentation" on the same page
 
 ---
 

@@ -5,6 +5,7 @@ Compact horizontal label with leading + trailing icons. Used for inline data dis
 - **Component node:** `342:4031`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=342-4031)
 - **Figma section:** `----- Card` → "Info row"
+- **Figma documentation:** Section `1730:6823` "Info row — Documentation" on the same page
 
 ---
 
