@@ -15,10 +15,10 @@ Used inside a higher-level Segment Control molecule — rarely placed alone.
 
 `Role=Pickup` — capsule pill with a centered label.
 
-| Layer | Bindings |
-|---|---|
+| Layer             | Bindings                                                                                              |
+| ----------------- | ----------------------------------------------------------------------------------------------------- |
 | Container (FRAME) | fill `Background/Primary Yellow` (per Role) · radius `Radius/Pill` · padding `Space/S` × `Space/Zero` |
-| Label (TEXT) | font `Text/Secondary/*` (Subheadline 15pt, SF Pro Text) · fill `Text/Primary Inverse Static` |
+| Label (TEXT)      | font `Text/Secondary/*` (Subheadline 15pt, SF Pro Text) · fill `Text/Primary Inverse Static`          |
 
 Other Role values swap container fill and label color.
 
