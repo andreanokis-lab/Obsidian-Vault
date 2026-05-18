@@ -21,7 +21,7 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 
 | Component | Status | Figma Node | Note |
 |---|---|---|---|
-| Avatar | ✅ Built | `1281:4432` | Rank 1/2/3/None variants. See [[Avatar]]. |
+| Avatar | ✅ Built | `1281:4432` | 3 Rank variants (First/Second/Third). Yellow ring on First; neutral on Second/Third. See [[Avatar]]. |
 | Badge | ✅ Built | `283:90` | 47 variants across Type × Role × Accent. ~276 production instances. See [[Badge]]. |
 | Image | ✅ Built | `449:2627` | 6 variants (3 Size × 2 Format). Circle/Square at 56/88/112pt. See [[Components/Image\|Image]]. |
 | Button | ✅ Built | `246:161` | 143 variants. Size × Type × State × Icon Only × Role. ~474 production instances in DS. See [[Button]]. |
