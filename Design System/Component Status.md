@@ -66,6 +66,9 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Range | ✅ Built | `379:716` | 2 State variants (Default, Disabled) — From / To range display. See [[Components/Range\|Range]]. |
 | Input Section | ✅ Built | `356:1259` | Compact caption + value pair. See [[Components/Input Section\|Input Section]]. |
 | Payment Amount | ✅ Built | `389:862` | Boxed payment breakdown (method + amount rows). See [[Components/Payment Amount\|Payment Amount]]. |
+| Select | ✅ Built | `307:1122` | 2 State variants (Default, Focused). Pill that opens a Menu. See [[Components/Select\|Select]]. |
+| Menu Item | ✅ Built | `937:4085` | 4 variants (Type × Stroke). Single row inside a Menu. See [[Components/Menu Item\|Menu Item]]. |
+| Menu | ✅ Built | `937:4113` | Up to 12 items + 1 destructive. Vertical menu container. See [[Components/Menu\|Menu]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |

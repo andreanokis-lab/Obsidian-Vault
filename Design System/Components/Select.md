@@ -7,6 +7,7 @@ For free-text entry use [[Input]]. For inline binary toggles use [[Toggle]].
 - **Component set node:** `307:1122`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=307-1122)
 - **Figma section:** `----- Select + Dropdown` → "Select"
+- **Figma documentation:** Section `1745:7513` "Select — Documentation" on the same page
 
 ---
 

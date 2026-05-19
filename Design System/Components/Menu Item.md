@@ -5,6 +5,7 @@ Single row inside a [[Menu]] — label + optional symbol (check, arrow, system g
 - **Component set node:** `937:4085`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=937-4085)
 - **Figma section:** `----- Select + Dropdown` → "Menu Item"
+- **Figma documentation:** Section `1745:7593` "Menu Item — Documentation" on the same page
 
 ---
 
