@@ -69,6 +69,10 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Select | ✅ Built | `307:1122` | 2 State variants (Default, Focused). Pill that opens a Menu. See [[Components/Select\|Select]]. |
 | Menu Item | ✅ Built | `937:4085` | 4 variants (Type × Stroke). Single row inside a Menu. See [[Components/Menu Item\|Menu Item]]. |
 | Menu | ✅ Built | `937:4113` | Up to 12 items + 1 destructive. Vertical menu container. See [[Components/Menu\|Menu]]. |
+| Collapse / Expand | ✅ Built | `1410:2236` | 2 Detent variants (Full Detent, In Section). Expandable section header. See [[Components/Collapse Expand\|Collapse / Expand]]. |
+| List Column Header | ✅ Built | `1324:3` | 3-column header (UNIT · MAKE · MODEL). See [[Components/List Column Header\|List Column Header]]. |
+| Segment Control | ✅ Built | `321:1008` | 13 combinations (Selected × Segments × Scrollable). iOS-style segmented control. See [[Components/Segment Control\|Segment Control]]. |
+| Controls | ✅ Built | `418:227` | Plus / Minus icon pair for steppers. See [[Components/Controls\|Controls]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
