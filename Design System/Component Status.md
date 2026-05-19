@@ -73,6 +73,7 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | List Column Header | ✅ Built | `1324:3` | 3-column header (UNIT · MAKE · MODEL). See [[Components/List Column Header\|List Column Header]]. |
 | Segment Control | ✅ Built | `321:1008` | 13 combinations (Selected × Segments × Scrollable). iOS-style segmented control. See [[Components/Segment Control\|Segment Control]]. |
 | Controls | ✅ Built | `418:227` | Plus / Minus icon pair for steppers. See [[Components/Controls\|Controls]]. |
+| Action Section | ✅ Built | `475:1232` | 2 Type variants (Default, Clear). Section header pill with label + INOP badge + trailing actions. See [[Components/Action Section\|Action Section]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
