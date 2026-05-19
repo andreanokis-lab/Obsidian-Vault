@@ -74,6 +74,9 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Segment Control | ✅ Built | `321:1008` | 13 combinations (Selected × Segments × Scrollable). iOS-style segmented control. See [[Components/Segment Control\|Segment Control]]. |
 | Controls | ✅ Built | `418:227` | Plus / Minus icon pair for steppers. See [[Components/Controls\|Controls]]. |
 | Action Section | ✅ Built | `475:1232` | 2 Type variants (Default, Clear). Section header pill with label + INOP badge + trailing actions. See [[Components/Action Section\|Action Section]]. |
+| Content | ✅ Built | `535:721` | 3 Status variants (Default, Success, Error). Image tile + caption + status badge. See [[Components/Content\|Content]]. |
+| Titles | ✅ Built | `1282:4616` | 3 Place variants (1st Place, 2nd-3nd Places, Skeleton). Podium name block. See [[Components/Titles\|Titles]]. |
+| Places Segments | ✅ Built | `1282:4757` | 2 Place variants (First place, 2-3 Places). Leaderboard podium block. See [[Components/Places Segments\|Places Segments]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
