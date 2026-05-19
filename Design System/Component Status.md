@@ -64,6 +64,8 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Card | ✅ Built | `389:2319` | 7 Role variants (Company, Invoices, Deposit Slip, Stops, Trip-Routes, Requests, Orders). See [[Components/Card\|Card]]. |
 | View | ✅ Built | `389:2245` | 2 Views (Basic, Extended) — payment / amount display block. See [[Components/View\|View]]. |
 | Range | ✅ Built | `379:716` | 2 State variants (Default, Disabled) — From / To range display. See [[Components/Range\|Range]]. |
+| Input Section | ✅ Built | `356:1259` | Compact caption + value pair. See [[Components/Input Section\|Input Section]]. |
+| Payment Amount | ✅ Built | `389:862` | Boxed payment breakdown (method + amount rows). See [[Components/Payment Amount\|Payment Amount]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
