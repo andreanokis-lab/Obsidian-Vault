@@ -81,6 +81,7 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | BOL Sets | ✅ Built | `1581:725` | 2 Type variants (Vehicle Set, Motorcycle-Set). BOL inspection outlines. See [[Components/BOL Sets\|BOL Sets]]. |
 | Damages | ✅ Built | `607:2217` | 3 State variants (Idle, Driver, Customer). Damage entry chip. See [[Components/Damages\|Damages]]. |
 | Tile Outlines | ✅ Built | `1487:67` | 5 Tile variants (Tile1–Tile5). Compact inspection tile canvases. See [[Components/Tile Outlines\|Tile Outlines]]. |
+| Alert Section Base | ✅ Built | `659:440` | 6 variants (3 Alert × 2 Stroke). Inline tinted alert container with Slot. See [[Components/Alert Section Base\|Alert Section Base]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
