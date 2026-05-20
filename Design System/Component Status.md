@@ -77,6 +77,7 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Content | ✅ Built | `535:721` | 3 Status variants (Default, Success, Error). Image tile + caption + status badge. See [[Components/Content\|Content]]. |
 | Titles | ✅ Built | `1282:4616` | 3 Place variants (1st Place, 2nd-3nd Places, Skeleton). Podium name block. See [[Components/Titles\|Titles]]. |
 | Places Segments | ✅ Built | `1282:4757` | 2 Place variants (First place, 2-3 Places). Leaderboard podium block. See [[Components/Places Segments\|Places Segments]]. |
+| Title and Controls | ✅ Built | `442:9262` | Sheet header bar — title + leading + trailing slots. See [[Components/Title and Controls\|Title and Controls]]. |
 | Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
 | Navigation Bar | 📋 Planned | — | Title + back + trailing action |
 | Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
