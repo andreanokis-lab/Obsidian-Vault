@@ -85,11 +85,20 @@ When the list has zero rows in production, fall back to the [[Empty State Patter
 
 ## Real Driver App screens using this pattern
 
-- **Settings** — Notifications, Privacy, Account groups with Toggles and Pickers
-- **Notifications** — list of notification rows, each navigating to a detail
-- **Order Details / Stops** — list of stops with Trailing-Icon chevrons
-- **Files / My Files** — file rows with Trailing-Icon (more menu) or chevron
-- **Sidebar menu** — navigation list with leading icons and chevrons
+Verified against the Driver App DS page on 2026-05-21. See [[_Pattern Evidence Map]] for the full list.
+
+- **Sibebar menu (Done)** — Sidebar section `662:30757` · navigation list with chevrons
+- **Settings (Done)** — Settings section `667:31696` · Toggles, Pickers, Trailing-Icon
+- **Notifications List (Done)** — Notifications section `662:30691`
+- **Receipts list (Done)** — Receipts section `662:30759` · uses [[Components/Content Row|Content Row]] (Receipts variant)
+- **Truck Service (Done)** — Truck Service section `662:30875` · [[Components/Content Row|Content Row]] (Truck Service variant)
+- **FIles (Done)** + **File (Done)** — Files `667:31228` / My Files `667:31699`
+- **Notes List (Done)** — Notes section `667:31700`
+- **Request List (Done)** — Requests section `667:31704`
+- **Safety List (Done)** — Safety section `667:31706`
+- **Trip List / Completed / Archived (Done)** — Trips section `1:28891`
+- **Trip Order List Pickup / Delivery / Completed (Done)** — Trips section · uses [[Components/Content Row|Content Row]] (Stops variant) + [[Components/Vertical Badge|Vertical Badge]]
+- **Routes List (Done)** + **List of stops (Done)** — Routes section `1:29825`
 
 ---
 

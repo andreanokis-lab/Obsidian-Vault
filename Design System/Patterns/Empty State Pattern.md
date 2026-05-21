@@ -74,12 +74,22 @@ If a search bar or filter chips sit above the list, they remain visible — the 
 
 ## Real Driver App screens using this pattern
 
-- **Company Filter** — Default empty + No results (active search + filters)
-- **Load list** — Default empty when no loads assigned
-- **Trip history** — Default empty when no completed trips
-- **Messages / Notifications** — Default empty when inbox is clean
-- **Photo gallery** — Default empty before any photos taken on a trip
-- **My Files** — Default empty before any files attached
+Verified against the Driver App DS page on 2026-05-21. See [[_Pattern Evidence Map]] for the full list.
+
+### Default empty
+
+- **Empty State** — top-level reference frame `1:28742`
+- **Notifications Placeholder (Done)** — Notifications section `662:30691`
+- **Notes Placeholder (Done)** — Notes section `667:31700`
+- **Leaderboard Placeholder (Done)** — Leaderboard section `667:31703`
+- **Request Placeholder (Done)** — Requests section `667:31704`
+- **Company Placeholder (Done)** — Company section `667:31705`
+- **Add Truck + Placeholder (Done)** — Safety section `667:31706`
+- **Nothing Here (Done)** ×2 — Truck Service section `662:30875`
+
+### No results (after search / filter)
+
+- **No Contact Found (Done)** — Company section `667:31705` (this is the canonical no-results screen; see [[Filter Search Results Pattern]] for the search-specific composition)
 
 ---
 

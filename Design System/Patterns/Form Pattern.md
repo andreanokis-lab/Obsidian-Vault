@@ -75,12 +75,18 @@ For pushed screens with a Navigation Bar, place `Cancel` on the leading edge and
 
 ## Real Driver App screens using this pattern
 
-- **Log In** — email + password Form Pattern, Submit at the bottom
-- **Profile** edit — multiple fields in a full sheet
-- **Add Note** — Text Area + Save, half-sheet
-- **Change Pass** — password + confirm + Save
-- **Add photo receipts / Deposit Slip** — short form embedded in a captured-photo flow
-- **Settings** — Toggle and Checkbox rows for preferences
+Verified against the Driver App DS page on 2026-05-21. See [[_Pattern Evidence Map]] for the full list.
+
+- **Log In (Done)** + **Log in via Phone Number (Done)** — Login section `1:29600`
+- **Carrier Sign-up (Done)** — multi-field registration · Login section
+- **Forgot Password Stage 1 / 2 / 3 (Done)** — multi-step recovery · Login section
+- **Password (Done)** + **Not Match (Done)** — Change Pass section `667:31702` · shows `Negative` state in practice
+- **Profile Settings (Done)** — Profile section `667:31697`
+- **New Note (Done)** — Text Area form · Notes section `667:31700`
+- **Driver Notes (Done)** — Text Area form · Driver Notes section `737:21942`
+- **Add Truck Services (Done)** — multi-field form · Truck Service section `662:30875`
+- **Receipts Add COP/COD (Done)** — amount + type form · Receipts section `662:30759`
+- **Add Driver Notes (Done)** + **ETA (Done)** + **Customer Template (Done)** — Order Details section `667:31707`
 
 ---
 
