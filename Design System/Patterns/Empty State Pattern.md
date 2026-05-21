@@ -20,7 +20,7 @@ Vertical stack, centred in the available content area (below nav bar, above tab 
 | Element | Component / Style |
 |---|---|
 | Icon / illustration | SF Symbol or [[Components/Image|Image]] · 56–80pt visual size · fill `Icon/Subtle` |
-| Headline | `Screen/Title` (17pt Semibold) text style · fill `Text/Primary` |
+| Headline | `Section/Title` (20pt Regular, Title 3) text style · fill `Text/Primary` |
 | Supporting message | `Text/Body` (17pt Regular) text style · fill `Text/Secondary` · max width 280pt |
 | Optional CTA | [[Components/Button|Button]] — Size=M, Type=Primary or Ghost (depending on emphasis) |
 

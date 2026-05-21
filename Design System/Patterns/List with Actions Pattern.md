@@ -13,7 +13,7 @@ For domain-specific rows (Receipts, Trackshop, Truck Service…) compose with [[
 
 A list with actions is a vertical stack of rows. Each row carries content + a trailing affordance.
 
-- **Section Header (optional)** — [[Components/Action Section|Action Section]] or a `Section/Title` text block above each group of rows
+- **Section Header (optional)** — [[Components/Action Section|Action Section]] or a `Section/Title` text block above each group of rows (see [[Section Header Pattern]])
 - **Row** — [[Components/List|List]] (View=List for compact, View=Preview Row when thumbnails matter), composed of:
   - Leading icon (24×24) — clarifies the row's intent (envelope, map pin, file)
   - [[Components/Row Text|Row Text]] — primary label + optional helper line

@@ -11,7 +11,7 @@ How to compose [[Components/Input|Input]], [[Components/Text Area|Text Area]], [
 
 A form is a vertical stack of field rows + a submit affordance.
 
-- **Header (optional)** — [[Components/Section Header (pattern)|Section Header]] or [[Components/Action Section|Action Section]] for grouped contexts
+- **Header (optional)** — [[Section Header Pattern]] or [[Components/Action Section|Action Section]] for grouped contexts
 - **Field rows** — one per input:
   - [[Components/Input|Input]] for single-line text, numbers, search
   - [[Components/Text Area|Text Area]] for multi-line text (notes, descriptions)
@@ -66,7 +66,7 @@ Field-level anatomy (label, container, placeholder, helper) lives inside each co
 | Form size | Container |
 |---|---|
 | 1–3 fields | Half sheet (medium detent) — see [[Sheet Pattern]] |
-| 4+ fields, or context needs full focus | Full sheet or pushed screen with [[Components/Navigation Bar (pattern)|Navigation Bar]] |
+| 4+ fields, or context needs full focus | Full sheet or pushed screen with a Navigation Bar (organism, see [[Sheet Pattern]]) |
 | Single-field edits | Action Sheet or inline edit on the existing row |
 
 For pushed screens with a Navigation Bar, place `Cancel` on the leading edge and `Save` / `Done` on the trailing edge.
