@@ -3,7 +3,7 @@
 How to communicate errors at four levels of severity — inline (field), inline (section), modal (action confirmation), and full-screen (network / server failure). Each level uses a different composition; choose by the user's recovery path.
 
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit)
-- **Figma documentation:** Section `<set after build>` on the `----- Patterns` page
+- **Figma documentation:** Section `1786:9860` "Error State Pattern — Documentation" on the `----- Patterns` page
 
 ---
 
