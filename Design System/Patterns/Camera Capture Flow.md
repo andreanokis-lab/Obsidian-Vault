@@ -6,7 +6,7 @@ For the static composition of the camera screen itself (top bar, viewfinder, bot
 For the visual tokens used by camera UI, see [[Foundations/Camera Tokens|Camera Tokens]].
 
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit)
-- **Figma documentation:** Section `<set after build>` on the `----- Patterns` page
+- **Figma documentation:** Section `1798:10288` "Camera Capture Flow — Documentation" on the `----- Patterns` page
 
 ---
 
