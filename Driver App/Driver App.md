@@ -8,6 +8,7 @@ Hub note for the HaulEx Driver App (iOS). Screen specs, flows, components, and d
 
 - [[Take Photo Screen]] — camera screen DS rebuild (Figma node `1:31606`, DS rebuild `626:20818`) — token violations fixed, 3 component swaps pending
 - [[Company Filter Not Found - Sprint Checklist]] — empty-state screen audit against Apple HIG + DS2 (Figma node `1:40837`)
+- [[Orders List]] — 5 Order cards in Section 1 on Page 5 (Figma node `777:20871`, parent section `762:20797`); detached due to missing SF Pro Text font on build host
 
 ## Related
 
