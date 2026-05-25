@@ -12,7 +12,9 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 |---|---|
 | ✅ Built | Component set exists in Figma, documented, ready to use |
 | 🔄 In Progress | Being built — specs exist, not yet published to library |
+| 📐 Pattern | Composition rule, not a component — documented in [[Patterns]] |
 | 📋 Planned | Needed, not started — file a request if you need it sooner |
+| 📋 Native iOS | Use the system control — no DS component planned |
 | ❓ Unknown | Referenced in designs but not confirmed in library |
 
 ---
@@ -82,12 +84,15 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Damages | ✅ Built | `607:2217` | 3 State variants (Idle, Driver, Customer). Damage entry chip. See [[Components/Damages\|Damages]]. |
 | Tile Outlines | ✅ Built | `1487:67` | 5 Tile variants (Tile1–Tile5). Compact inspection tile canvases. See [[Components/Tile Outlines\|Tile Outlines]]. |
 | Alert Section Base | ✅ Built | `659:440` | 6 variants (3 Alert × 2 Stroke). Inline tinted alert container with Slot. See [[Components/Alert Section Base\|Alert Section Base]]. |
-| Form Field (labeled input) | 📋 Planned | — | Label + Input + Error message |
-| Navigation Bar | 📋 Planned | — | Title + back + trailing action |
-| Tab Bar | 📋 Planned | — | 3–5 tab items, active/default state |
-| Search Bar | 📋 Planned | — | |
-| Section Header | 📋 Planned | — | Title + optional action link |
-| Empty State | 📋 Planned | — | Icon + headline + body + optional CTA |
+| Form Field (labeled input) | 📐 Pattern | — | Owned by [[Form Pattern]] — composes [[Components/Input\|Input]] + Label + Helper. Not a separate component. |
+| Section Header | 📐 Pattern | — | Owned by [[Section Header Pattern]] — Plain title, Title + trailing action, or [[Components/Action Section\|Action Section]]. |
+| Empty State | 📐 Pattern | — | Owned by [[Empty State Pattern]] — Image + Section/Title text + Body + optional [[Components/Button\|Button]]. |
+| Navigation Bar | 📋 Planned (organism) | `299:1823` (instance) | Title + back + trailing action. Used in every pushed screen. Organism note pending. |
+| Tab Bar | 📋 Planned (organism) | — | 3–5 tab items, active/default state. See [[Navigation Patterns]] for usage rules. |
+| Search Bar | 📋 Planned (organism) | — | Referenced by [[Filter Search Results Pattern]]. Composes [[Components/Input\|Input]] in search variant + leading magnifier + trailing clear. |
+| Toast | 📋 Planned (organism) | — | Referenced by [[Error State Pattern]] for non-blocking failures (photo upload, save). |
+| Activity Indicator | 📋 Native iOS | — | System spinner per [[Loading Skeleton Pattern]]. No DS component — use `UIActivityIndicatorView`. |
+| Date Picker / Time Picker | 📋 Planned | — | Multi-step form flows need this (Order Creation, ETA). Currently composed via [[Components/Input\|Input]] + sheet. |
 | LeaderboardCard | 📋 Planned | — | Avatar + name + stats. Proposed follow-up on [[Avatar]]. |
 | Mode Label Pill | 📋 Planned | — | "Driver View" / "Passenger View" text chip. Background/Mono bg, Text/Primary Inverse Static label, Radius/M. Needs variants: Driver View, Passenger View, Front, Rear. Identified in [[Take Photo Screen]]. |
 
@@ -111,12 +116,14 @@ See full build plan in [[Components - In Progress]].
 
 ## Sheets & Overlays
 
-| Pattern | Status | Doc |
+The Sheet itself is an organism with no individual component note — composition is documented at the pattern level. Header slot components ([[Components/Title and Controls|Title and Controls]], [[Components/Leading (Sheets)|Leading (Sheets)]], [[Components/Trailing (Sheets)|Trailing (Sheets)]]) are documented individually.
+
+| Variant | Status | Doc |
 |---|---|---|
-| Half Sheet (medium detent) | 📋 Planned | [[Sheet Patterns]] |
-| Full Sheet (large detent) | 📋 Planned | [[Sheet Patterns]] |
-| Stack Button Sheet | 📋 Planned | [[Sheet Patterns]] |
-| Action Sheet | 📋 Planned | [[Sheet Patterns]] |
+| Half Sheet (medium detent) | 📐 Pattern | [[Sheet Pattern]] · Variant 1 |
+| Full Sheet (large detent) | 📐 Pattern | [[Sheet Pattern]] · Variant 2 |
+| Stack Button Sheet | 📐 Pattern | [[Sheet Pattern]] · Variant 3 |
+| Action Sheet | 📐 Pattern | [[Sheet Pattern]] · Variant 4 (uses iOS native `UIAlertController`) |
 
 ---
 

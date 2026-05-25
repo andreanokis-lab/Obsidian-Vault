@@ -1,7 +1,7 @@
 # HaulEx — Knowledge Hub
 
 The single entry point for everything in this vault. Three top-level areas:
-**Design System** (tokens + components), **Driver App** (screens + flows), **Sessions** (work log).
+**Design System** (tokens + components + patterns), **Driver App** (screens + flows), **Sessions** (work log).
 
 ---
 
@@ -20,13 +20,29 @@ The HaulEx UIKit. Tokens, components, patterns, rules.
 
 → Full hub: [[Design System/Design System|Design System]]
 
-**Foundations** (tokens) — [[Design System/Foundations/Spacing|Spacing]] · [[Design System/Foundations/Border|Border]] · [[Design System/Foundations/Colors - Primitives|Colors – Primitives]] · [[Design System/Foundations/Colors - Semantic|Colors – Semantic]] · [[Design System/Foundations/Typography - Primitives|Typography – Primitives]] · [[Design System/Foundations/Typography - Semantic|Typography – Semantic]] · [[Design System/Foundations/Text Styles|Text Styles]] · [[Design System/Foundations/Camera Tokens|Camera Tokens]]
+### Foundations (tokens)
 
-**Components** — [[Design System/Components/Avatar|Avatar]] · [[Design System/Components/Badge|Badge]] · [[Design System/Components/Vertical Badge|Vertical Badge]] · [[Design System/Components/Button|Button]] · [[Design System/Components/Input|Input]] · [[Design System/Components/Text Area|Text Area]] · [[Design System/Components/Draw Area|Draw Area]] · [[Design System/Components/Divider|Divider]] · [[Design System/Components/Tooltip|Tooltip]] · [[Design System/Components/Components - In Progress|In Progress]]
+[[Design System/Foundations/Spacing|Spacing]] · [[Design System/Foundations/Border|Border]] · [[Design System/Foundations/Colors - Primitives|Colors – Primitives]] · [[Design System/Foundations/Colors - Semantic|Colors – Semantic]] · [[Design System/Foundations/Typography - Primitives|Typography – Primitives]] · [[Design System/Foundations/Typography - Semantic|Typography – Semantic]] · [[Design System/Foundations/Text Styles|Text Styles]] · [[Design System/Foundations/Camera Tokens|Camera Tokens]]
 
-**Patterns** — [[Design System/Patterns/Patterns|Index]] · [[Design System/Patterns/Sheet Patterns|Sheet]] · [[Design System/Patterns/Navigation Patterns|Navigation]] · [[Design System/Patterns/Form Patterns|Form]] · [[Design System/Patterns/Empty State Patterns|Empty State]]
+### Components — atoms
 
-**Reference** — [[Design System/Architecture|Architecture]] · [[Design System/Rules|Rules]] · [[Design System/Component Status|Component Status]]
+[[Design System/Components/Avatar|Avatar]] · [[Design System/Components/Badge|Badge]] · [[Design System/Components/Vertical Badge|Vertical Badge]] · [[Design System/Components/Button|Button]] · [[Design System/Components/Input|Input]] · [[Design System/Components/Text Area|Text Area]] · [[Design System/Components/Draw Area|Draw Area]] · [[Design System/Components/Divider|Divider]] · [[Design System/Components/Tooltip|Tooltip]] · [[Design System/Components/Image|Image]] · [[Design System/Components/Checkbox|Checkbox]] · [[Design System/Components/Checkmark|Checkmark]] · [[Design System/Components/Toggle|Toggle]] · [[Design System/Components/Chip|Chip]] · [[Design System/Components/Counter|Counter]] · [[Design System/Components/Tab Item|Tab Item]] · [[Design System/Components/Page Control|Page Control]] · [[Design System/Components/Damage-Marker|Damage-Marker]]
+
+### Components — molecules
+
+[[Design System/Components/Row Text|Row Text]] · [[Design System/Components/List|List]] · [[Design System/Components/Content Row|Content Row]] · [[Design System/Components/List Grid|List Grid]] · [[Design System/Components/Leaderboard Row|Leaderboard Row]] · [[Design System/Components/Card|Card]] · [[Design System/Components/View|View]] · [[Design System/Components/Range|Range]] · [[Design System/Components/Input Section|Input Section]] · [[Design System/Components/Payment Amount|Payment Amount]] · [[Design System/Components/Info row|Info row]] · [[Design System/Components/File field|File field]] · [[Design System/Components/Select|Select]] · [[Design System/Components/Menu|Menu]] · [[Design System/Components/Menu Item|Menu Item]] · [[Design System/Components/Segment Control|Segment Control]] · [[Design System/Components/Controls|Controls]] · [[Design System/Components/Collapse Expand|Collapse / Expand]] · [[Design System/Components/List Column Header|List Column Header]] · [[Design System/Components/Action Section|Action Section]] · [[Design System/Components/Content|Content]] · [[Design System/Components/Titles|Titles]] · [[Design System/Components/Places Segments|Places Segments]] · [[Design System/Components/Title and Controls|Title and Controls]] · [[Design System/Components/Trailing (Content Row)|Trailing (Content Row)]] · [[Design System/Components/Trailing (Action Section)|Trailing (Action Section)]] · [[Design System/Components/Trailing (Sheets)|Trailing (Sheets)]] · [[Design System/Components/Trailing (Image Content)|Trailing (Image Content)]] · [[Design System/Components/Leading (Sheets)|Leading (Sheets)]] · [[Design System/Components/Alert Section Base|Alert Section Base]] · [[Design System/Components/BOL Sets|BOL Sets]] · [[Design System/Components/Damages|Damages]] · [[Design System/Components/Tile Outlines|Tile Outlines]] · [[Design System/Components/Components - In Progress|In Progress (Camera)]]
+
+### Patterns (composition)
+
+**Generic** — [[Design System/Patterns/Form Pattern|Form]] · [[Design System/Patterns/List with Actions Pattern|List with Actions]] · [[Design System/Patterns/Empty State Pattern|Empty State]] · [[Design System/Patterns/Error State Pattern|Error State]] · [[Design System/Patterns/Loading Skeleton Pattern|Loading Skeleton]] · [[Design System/Patterns/Section Header Pattern|Section Header]]
+
+**HaulEx-specific** — [[Design System/Patterns/Camera Capture Flow|Camera Capture Flow]] · [[Design System/Patterns/Take Photo Screen Pattern|Take Photo Screen]] · [[Design System/Patterns/Leaderboard Pattern|Leaderboard]] · [[Design System/Patterns/Sheet Pattern|Sheet]] · [[Design System/Patterns/Filter Search Results Pattern|Filter / Search Results]] · [[Design System/Patterns/Navigation Patterns|Navigation]]
+
+**Indexes** — [[Design System/Patterns/Patterns|Patterns Index]] · [[Design System/Patterns/_Pattern Evidence Map|Pattern Evidence Map]]
+
+### Reference
+
+[[Design System/Architecture|Architecture]] · [[Design System/Rules|Rules]] · [[Design System/Component Status|Component Status]]
 
 ---
 
