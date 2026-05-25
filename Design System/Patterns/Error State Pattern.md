@@ -13,7 +13,7 @@ How to communicate errors at four levels of severity — inline (field), inline 
 |---|---|---|
 | **Inline field error** | [[Components/Input|Input]] (`State=Negative`) + populated `Helper` | A specific form field is invalid (bad format, missing value) |
 | **Inline section error** | [[Components/Alert Section Base|Alert Section Base]] (`Alert=Negative`) | A whole section or step has failed; user stays on the screen |
-| **Modal confirmation (destructive)** | [[Components/Sheet|Sheet]] (Action Sheet detent) with [[Components/Button|Button]] (`Role=Red`) | Action is destructive (delete, sign out) — confirm before executing |
+| **Modal confirmation (destructive)** | [[Sheet Pattern|Sheet]] (Action Sheet detent) with [[Components/Button|Button]] (`Role=Red`) | Action is destructive (delete, sign out) — confirm before executing |
 | **Full-screen error** | Icon + headline + body + [[Components/Button|Button]] retry CTA, centred (mirrors [[Empty State Pattern]] layout) | Network failure, server unreachable, content can't load at all |
 
 ---
@@ -41,7 +41,7 @@ How to communicate errors at four levels of severity — inline (field), inline 
 
 | Element | Component / token |
 |---|---|
-| Container | [[Components/Sheet|Sheet]] (Action Sheet detent — short half-sheet) |
+| Container | [[Sheet Pattern|Sheet]] (Action Sheet detent — short half-sheet) |
 | Title | `Section/Title` (20pt Title 3) · `Text/Primary` — what's about to happen ("Delete this receipt?") |
 | Body | `Text/Body` · `Text/Secondary` — consequences ("This can't be undone") |
 | Primary action | [[Components/Button|Button]] · `Size=L, Type=Primary, Role=Red` — the destructive verb ("Delete") |

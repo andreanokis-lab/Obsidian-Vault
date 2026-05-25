@@ -44,13 +44,13 @@ Covers ~50% of the screen. Background visible behind.
 
 **Use when:**
 - Short selection (2–5 options in a list)
-- Single- or two-field form where keyboard fits naturally
-- Filters / sort controls
+- Single- or two-field form ([[Form Pattern]]) where the keyboard fits naturally
+- Filters / sort controls — see [[Filter Search Results Pattern]]
 - Inline pickers (date, value selection)
 
 **Don't use when:**
 - Multi-step flow
-- Form has 4+ fields — keyboard fights for space → Full Sheet
+- Form has 4+ fields ([[Form Pattern]]) — keyboard fights for space → Full Sheet
 - User needs full focus
 
 **iOS:** `UISheetPresentationController` with `.medium` detent.
@@ -64,7 +64,7 @@ Covers ~90% of the screen. Background mostly obscured.
 **Use when:**
 - Multi-step flow requiring full focus (signature capture, multi-field forms)
 - Document / photo viewer
-- Long forms (4+ fields)
+- Long forms (4+ fields — see [[Form Pattern]])
 - Sub-navigation inside a flow
 - Any sheet that contains its own navigation bar
 
@@ -94,7 +94,7 @@ A half sheet whose only content is a title / message + 2–3 stacked Buttons. Th
 ```
 
 **Use when:**
-- Confirm a destructive action (delete, remove, cancel trip, sign out)
+- Confirm a destructive action (delete, remove, cancel trip, sign out) — see [[Error State Pattern]] · *Modal confirmation* sub-pattern for the full anatomy
 - Confirm an irreversible state change
 - Exactly 2 paths (do it / don't do it)
 

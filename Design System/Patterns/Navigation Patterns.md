@@ -68,10 +68,10 @@ For **peer-level** top sections — user switches between unrelated areas at the
 |---|---|
 | Drilling into a record (load, company, trip detail) | **Push** (navigation stack) |
 | Switching top-level app section | **Tab Bar** |
-| Completing a task without losing context of current screen | **Half Sheet** (see [[Sheet Patterns]]) |
-| Entering a focused multi-step flow | **Full Sheet** (see [[Sheet Patterns]]) |
+| Completing a task without losing context of current screen | **Half Sheet** (see [[Sheet Pattern]]) |
+| Entering a focused multi-step flow | **Full Sheet** (see [[Sheet Pattern]]) |
 | Showing settings that belong to the current screen | **Push** |
-| Confirming a destructive action | **Stack Button Sheet** (see [[Sheet Patterns]]) |
+| Confirming a destructive action | **Stack Button Sheet** (see [[Sheet Pattern]]) |
 
 ---
 

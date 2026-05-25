@@ -4,7 +4,7 @@ Reference: Driver App (`yhxCSzJrafZbqXGZOCBCKE`) → `DS` page. Every pattern do
 
 ---
 
-## Form Pattern
+## [[Form Pattern]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -25,7 +25,7 @@ Reference: Driver App (`yhxCSzJrafZbqXGZOCBCKE`) → `DS` page. Every pattern do
 
 ---
 
-## List with Actions Pattern
+## [[List with Actions Pattern]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -48,7 +48,7 @@ Reference: Driver App (`yhxCSzJrafZbqXGZOCBCKE`) → `DS` page. Every pattern do
 
 ---
 
-## Empty State Pattern
+## [[Empty State Pattern]]
 
 ### Default empty (no data yet)
 
@@ -71,7 +71,7 @@ Reference: Driver App (`yhxCSzJrafZbqXGZOCBCKE`) → `DS` page. Every pattern do
 
 ---
 
-## Error State Pattern
+## [[Error State Pattern]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -88,7 +88,7 @@ Reference: Driver App (`yhxCSzJrafZbqXGZOCBCKE`) → `DS` page. Every pattern do
 
 ---
 
-## Loading Skeleton Pattern
+## [[Loading Skeleton Pattern]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -98,13 +98,13 @@ Most lists rely on the Skeleton variant of Titles or implicit shimmer. No dedica
 
 ---
 
-## Section Header Pattern
+## [[Section Header Pattern]]
 
 Used inside most list screens — Settings groups, Notes sections, etc. Not a standalone screen pattern; appears as a sub-pattern within others.
 
 ---
 
-## Camera Capture Flow
+## [[Camera Capture Flow]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -120,7 +120,7 @@ Used inside most list screens — Settings groups, Notes sections, etc. Not a st
 
 ---
 
-## Take Photo Screen Pattern
+## [[Take Photo Screen Pattern]]
 
 Specific composition of Camera atoms + molecules into a full capture screen. Lives on the UIKit `----- Camera` page (`1182:544`) and instantiated in:
 
@@ -131,7 +131,7 @@ Specific composition of Camera atoms + molecules into a full capture screen. Liv
 
 ---
 
-## Leaderboard Pattern
+## [[Leaderboard Pattern]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -141,7 +141,7 @@ Specific composition of Camera atoms + molecules into a full capture screen. Liv
 
 ---
 
-## Sheet Pattern
+## [[Sheet Pattern]]
 
 | Screen | Section | Notes |
 |---|---|---|
@@ -157,7 +157,7 @@ Specific composition of Camera atoms + molecules into a full capture screen. Liv
 
 ---
 
-## Filter / Search Results (Empty)
+## [[Filter Search Results Pattern|Filter / Search Results (Empty)]]
 
 | Screen | Section | Notes |
 |---|---|---|

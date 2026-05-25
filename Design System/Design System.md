@@ -64,13 +64,25 @@ Built components in the UIKit library. Status overview: [[Component Status]].
 
 ## Patterns
 
-Compositional guidance — how components combine into common UI.
+Compositional guidance — how components combine into common UI. Full index: [[Patterns/Patterns|Patterns]].
 
-- [[Patterns/Patterns|Patterns Index]]
-- [[Patterns/Sheet Patterns|Sheet Patterns]] — half / full / stack button
-- [[Patterns/Navigation Patterns|Navigation Patterns]] — nav stack, tab bar, modal vs push
-- [[Patterns/Form Patterns|Form Patterns]] — inputs, states, layout, validation
-- [[Patterns/Empty State Patterns|Empty State Patterns]] — no data, no results, loading, error
+**Generic:**
+- [[Patterns/Form Pattern|Form Pattern]] — multi-field data entry
+- [[Patterns/List with Actions Pattern|List with Actions Pattern]] — rows with trailing controls
+- [[Patterns/Empty State Pattern|Empty State Pattern]] — no data / no results
+- [[Patterns/Error State Pattern|Error State Pattern]] — inline / modal / full-screen by recovery path
+- [[Patterns/Loading Skeleton Pattern|Loading Skeleton Pattern]] — native spinner + Titles `Place=Skeleton`
+- [[Patterns/Section Header Pattern|Section Header Pattern]] — plain / + action / Action Section
+
+**HaulEx-specific:**
+- [[Patterns/Camera Capture Flow|Camera Capture Flow]] — end-to-end photo capture
+- [[Patterns/Take Photo Screen Pattern|Take Photo Screen Pattern]] — static camera layout
+- [[Patterns/Leaderboard Pattern|Leaderboard Pattern]] — Olympic podium + rank list
+- [[Patterns/Sheet Pattern|Sheet Pattern]] — Half / Full / Stack Button / Action Sheet
+- [[Patterns/Filter Search Results Pattern|Filter Search Results Pattern]] — search bar + chips with empty state
+- [[Patterns/Navigation Patterns|Navigation Patterns]] — Navigation Stack vs Tab Bar (legacy combined note)
+
+Pattern → real screen mapping: [[Patterns/_Pattern Evidence Map|Pattern Evidence Map]].
 
 ---
 

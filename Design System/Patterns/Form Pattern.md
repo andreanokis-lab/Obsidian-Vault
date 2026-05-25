@@ -23,6 +23,8 @@ A form is a vertical stack of field rows + a submit affordance.
 
 Field-level anatomy (label, container, placeholder, helper) lives inside each component note — this pattern only governs how the fields combine.
 
+For form-wide failures (server rejected the submission, network down) use the appropriate sub-pattern of [[Error State Pattern]] above or instead of the field-level errors.
+
 ---
 
 ## Composition rules
@@ -45,7 +47,7 @@ Field-level anatomy (label, container, placeholder, helper) lives inside each co
 | Empty form field awaiting input | Input: `State=Default` |
 | Field currently focused | Input: `State=Focused` (Border/Blue) |
 | Field with a typed value | Input: `State=Filled` |
-| Inline validation error | Input: `State=Negative` **and** populate `Helper` with the error message |
+| Inline validation error | Input: `State=Negative` **and** populate `Helper` with the error message — see [[Error State Pattern]] · *Inline field error* sub-pattern |
 | Field temporarily unavailable | Input: `State=Disabled` (do not use for read-only display of saved values) |
 
 ### Required vs optional fields

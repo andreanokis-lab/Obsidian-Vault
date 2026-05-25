@@ -51,9 +51,9 @@ Don't use mode-aware tokens (`Background/Subtle`, `Text/Primary`) inside the cam
 | Originating context | Entry pattern | Where |
 |---|---|---|
 | Single photo (e.g., profile picture) | Action row tap → camera | `Picture (Done)` — Profile |
-| Photo evidence in a list | Trailing "+ Add" or "+" icon button | Receipts list, Adjustments, Damages |
-| Required step in a workflow | Push from the workflow step | Receipts Add COP/COD → Take a Photo, BOL inspection → Take a photo |
-| Scan-with-recognition (VIN, barcode) | Push from scan trigger; falls back to manual input on failure | Scan VIN flow |
+| Photo evidence in a list | Trailing "+ Add" or "+" icon button (see [[List with Actions Pattern]]) | Receipts list, Adjustments, Damages |
+| Required step in a workflow | Push from the workflow step (often a field inside [[Form Pattern]]) | Receipts Add COP/COD → Take a Photo, BOL inspection → Take a photo |
+| Scan-with-recognition (VIN, barcode) | Push from scan trigger; falls back to manual input on failure (see [[Error State Pattern]] · *Full-screen* sub-case) | Scan VIN flow |
 | Multi-photo batch | "Add photos" entry that opens camera in multi-capture mode | Add Photo Receipts, Multiple Photos |
 
 ---

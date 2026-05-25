@@ -81,6 +81,17 @@ The last row inside each section hides its divider; the gap to the next header p
 
 When the list has zero rows in production, fall back to the [[Empty State Pattern]] — icon + headline + body + optional CTA. Don't render an empty container.
 
+If the list is the result of a search or filter and returns nothing, use [[Filter Search Results Pattern]] (which extends Empty State with search-bar / chip affordances).
+
+---
+
+## Loading state inside a list
+
+While data is fetching, follow [[Loading Skeleton Pattern]]:
+
+- Short fetches (< 1s) — native iOS activity indicator centred in the list area.
+- Longer fetches — skeleton rows that match the eventual layout (same row count, same proportions). The Driver App only ships one designed skeleton today ([[Components/Titles|Titles]] `Place=Skeleton`); for new list skeletons, follow the rules in the Loading Skeleton Pattern.
+
 ---
 
 ## Real Driver App screens using this pattern
