@@ -88,7 +88,8 @@ Pattern → real screen mapping: [[Patterns/_Pattern Evidence Map|Pattern Eviden
 
 ## Rules & reference
 
-- [[Rules]] — non-negotiable rules. Read before building.
+- [[Rules]] — non-negotiable visual rules. Read before building.
+- [[Content Style Guide]] — voice, tone, labels, errors, copy formats, HaulEx glossary.
 - [[Architecture]] — token philosophy, naming, mode rules.
 - [[Component Status]] — full inventory: built / in progress / planned.
 - [[Getting Started]] — onboarding for new designers.

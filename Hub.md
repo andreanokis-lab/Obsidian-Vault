@@ -42,7 +42,7 @@ The HaulEx UIKit. Tokens, components, patterns, rules.
 
 ### Reference
 
-[[Design System/Architecture|Architecture]] · [[Design System/Rules|Rules]] · [[Design System/Component Status|Component Status]]
+[[Design System/Architecture|Architecture]] · [[Design System/Rules|Rules]] · [[Design System/Content Style Guide|Content Style Guide]] · [[Design System/Component Status|Component Status]]
 
 ---
 

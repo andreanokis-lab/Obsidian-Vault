@@ -114,7 +114,8 @@ Apply these via Figma's text style panel — never set font size manually.
 ## Key links
 
 - [[Design System]] — full token + component hub
-- [[Rules]] — non-negotiable design rules
+- [[Rules]] — non-negotiable visual rules
+- [[Content Style Guide]] — voice, tone, labels, errors, copy formats, HaulEx glossary
 - [[Component Status]] — what's built, what's in progress
 - [[Patterns]] — sheet, navigation, form, empty state guides
 - [[Architecture]] — token philosophy and naming conventions

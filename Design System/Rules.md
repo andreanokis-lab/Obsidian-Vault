@@ -2,6 +2,8 @@
 
 These rules apply to every screen, every component, every state. They are not suggestions.
 
+For copy rules — labels, errors, empty states, toasts, dates, HaulEx terminology — see the [[Content Style Guide]]. Visual and structural rules live here; word-level rules live there.
+
 ---
 
 ## T — Token Rules
