@@ -5,7 +5,7 @@ The canonical token & component reference for the HaulEx UIKit Figma library.
 - **File:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit)
 - **File Key:** `3qOFF7kHsaZPfdftDb1CVz`
 - **Owner:** Andrew Nabok
-- **Last synced:** 2026-04-27
+- **Last synced:** 2026-05-26
 
 ---
 
@@ -58,6 +58,10 @@ Built components in the UIKit library. Status overview: [[Component Status]].
 | [[Components/Draw Area\|Draw Area]] | Signature / freehand capture, S + M |
 | [[Components/Divider\|Divider]] | Horizontal + vertical hairline |
 | [[Components/Tooltip\|Tooltip]] | 4 directional + info popover |
+| [[Components/Navigation Bar\|Navigation Bar]] | 6 Type variants — Default, Search, Order Label, Settings, Stack, Horizontal |
+| [[Components/Tab Bar\|Tab Bar]] | iOS bottom tab bar, 3 Selected variants |
+| [[Components/Sidebar\|Sidebar]] | Right-edge slide-in drawer with scrim |
+| [[Components/Toast\|Toast]] | 4 Message variants — Success, Error, Warning, Info |
 | [[Components/Components - In Progress\|In Progress]] | Camera component build plan |
 
 ---

@@ -87,10 +87,11 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Form Field (labeled input) | 📐 Pattern | — | Owned by [[Form Pattern]] — composes [[Components/Input\|Input]] + Label + Helper. Not a separate component. |
 | Section Header | 📐 Pattern | — | Owned by [[Section Header Pattern]] — Plain title, Title + trailing action, or [[Components/Action Section\|Action Section]]. |
 | Empty State | 📐 Pattern | — | Owned by [[Empty State Pattern]] — Image + Section/Title text + Body + optional [[Components/Button\|Button]]. |
-| Navigation Bar | 📋 Planned (organism) | `299:1823` (instance) | Title + back + trailing action. Used in every pushed screen. Organism note pending. |
-| Tab Bar | 📋 Planned (organism) | — | 3–5 tab items, active/default state. See [[Navigation Patterns]] for usage rules. |
+| Navigation Bar | ✅ Built | `309:2318` | 6 Type variants (Default, Search Field, Order Label, Settings, Stack, Horizontal). Composes [[Components/Button\|Button]] + [[Components/Title and Controls\|Title and Controls]] + [[Components/Select\|Select]] + [[Components/Badge\|Badge]]. See [[Components/Navigation Bar\|Navigation Bar]]. |
+| Tab Bar | ✅ Built | `317:3058` | 3 Selected variants (1, 2, 3). iOS bottom tab bar with chrome material, 18pt SF Symbols + Caption labels. See [[Components/Tab Bar\|Tab Bar]]. |
+| Sidebar | ✅ Built | `1109:1068` | Right-edge slide-in drawer with scrim. 5 default rows (Outline, Receipts, Invoice, Deposit Slip, Truck Service). See [[Components/Sidebar\|Sidebar]]. |
+| Toast | ✅ Built | `421:1573` | 4 Message variants (Success, Error, Warning, Info). Icon + text + divider + Close pill. See [[Components/Toast\|Toast]]. |
 | Search Bar | 📋 Planned (organism) | — | Referenced by [[Filter Search Results Pattern]]. Composes [[Components/Input\|Input]] in search variant + leading magnifier + trailing clear. |
-| Toast | 📋 Planned (organism) | — | Referenced by [[Error State Pattern]] for non-blocking failures (photo upload, save). |
 | Activity Indicator | 📋 Native iOS | — | System spinner per [[Loading Skeleton Pattern]]. No DS component — use `UIActivityIndicatorView`. |
 | Date Picker / Time Picker | 📋 Planned | — | Multi-step form flows need this (Order Creation, ETA). Currently composed via [[Components/Input\|Input]] + sheet. |
 | LeaderboardCard | 📋 Planned | — | Avatar + name + stats. Proposed follow-up on [[Avatar]]. |
