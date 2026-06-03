@@ -5,8 +5,51 @@
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Driver App\"",
+      "color": {
+        "a": 1,
+        "rgb": 5017087
+      }
+    },
+    {
+      "query": "path:\"Design System/Foundations\"",
+      "color": {
+        "a": 1,
+        "rgb": 10777343
+      }
+    },
+    {
+      "query": "path:\"Design System/Components\"",
+      "color": {
+        "a": 1,
+        "rgb": 4637068
+      }
+    },
+    {
+      "query": "path:\"Design System/Patterns\"",
+      "color": {
+        "a": 1,
+        "rgb": 16752451
+      }
+    },
+    {
+      "query": "path:\"Sessions\"",
+      "color": {
+        "a": 1,
+        "rgb": 9079434
+      }
+    },
+    {
+      "query": "file:Hub OR file:\"Design System\" OR file:\"Driver App\" OR file:\"Getting Started\"",
+      "color": {
+        "a": 1,
+        "rgb": 16735324
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0.4,
@@ -17,6 +60,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.0078125,
+  "scale": 0.2292013594174908,
   "close": true
 }
