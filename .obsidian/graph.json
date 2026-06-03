@@ -3,20 +3,63 @@
   "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Driver App\"",
+      "color": {
+        "a": 1,
+        "rgb": 5017087
+      }
+    },
+    {
+      "query": "path:\"Design System/Foundations\"",
+      "color": {
+        "a": 1,
+        "rgb": 10777343
+      }
+    },
+    {
+      "query": "path:\"Design System/Components\"",
+      "color": {
+        "a": 1,
+        "rgb": 4637068
+      }
+    },
+    {
+      "query": "path:\"Design System/Patterns\"",
+      "color": {
+        "a": 1,
+        "rgb": 16752451
+      }
+    },
+    {
+      "query": "path:\"Sessions\"",
+      "color": {
+        "a": 1,
+        "rgb": 9079434
+      }
+    },
+    {
+      "query": "file:Hub OR file:\"Design System\" OR file:\"Driver App\" OR file:\"Getting Started\"",
+      "color": {
+        "a": 1,
+        "rgb": 16735324
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": true,
+  "textFadeMultiplier": 0.4,
+  "nodeSizeMultiplier": 0.355208333333333,
+  "lineSizeMultiplier": 1.01875,
+  "collapse-forces": false,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.5581582982401309,
-  "close": false
+  "scale": 0.4505081176757768,
+  "close": true
 }
