@@ -57,7 +57,7 @@ The HaulEx Driver App (iOS).
 
 → Full hub: [[Driver App/Driver App|Driver App]]
 
-**Screens** — [[Driver App/Take Photo Screen|Take Photo]] · [[Driver App/Company Filter Not Found - Sprint Checklist|Company Filter Not Found]]
+**Screens** — [[Driver App/Take Photo Screen|Take Photo]] · [[Driver App/Company Filter Not Found - Sprint Checklist|Company Filter Not Found]] · [[Driver App/Vehicle Details Screen|Vehicle Details]]
 
 ---
 
