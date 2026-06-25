@@ -61,6 +61,15 @@ The HaulEx Driver App (iOS).
 
 ---
 
+## Customer Portal
+
+The HaulEx Customer Portal / My Orders (web).
+**Figma:** [Customer Portal / My Orders](https://www.figma.com/design/pxgSYYHXZvoBzTek9xJVZM/Customer-Portal---My-Orders)
+
+**Screens** — [[Customer Portal/Order Detail Page|Order Detail Page]]
+
+---
+
 ## Sessions
 
 Chronological log of design-system work sessions. → [[Sessions]]
