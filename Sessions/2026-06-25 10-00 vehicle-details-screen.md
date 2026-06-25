@@ -41,6 +41,7 @@ A full **Vehicle Details** screen for the HaulEx Driver App. Single frame, stack
 | Content | resolved from UIKit `535:721` | Status=Default/Success/Error |
 | Damages | resolved from UIKit `607:2217` | State=Driver/Customer |
 | Toast | `257259a5df4025579182c542bdc1144318fcb2fb` | Message=Success |
+| Section Base | `5895cda17f750f1ec4d0aaca86323ce448623c6e` | Single COMPONENT (not set), UIKit page "----- Section Base", node `802:599`. Used for Vehicle Data, Notes (Pickup + Delivery), and Additional Info blocks. |
 
 ---
 
@@ -104,6 +105,23 @@ Photo tiles are 112×112pt + 8pt gap = 3 columns fit in 361pt content width (16p
 
 - **Order Details** → tap vehicle row: opens Vehicle Details
 - **Sync page** → tap vehicle: opens Vehicle Details (focused on upload status)
+
+---
+
+## Section Base usage (third context window)
+
+Four manual label+content pairs replaced with `Section Base` instances via `importComponentByKeyAsync`. Pattern: create instance before the label node using `parent.insertChild(idx, inst)`, then move content node(s) into the inner `Slot` frame via `slot.appendChild(contentNode)`, then `labelNode.remove()`.
+
+| Replacement | New node | Slot content |
+|---|---|---|
+| "Vehicle Data" title text + card wrapper | `1067:20790` | 7 `Info row` frames moved directly into slot (card wrapper removed — slot provides the card bg) |
+| Pickup "NOTES" label + notes body text | `1067:20821` | Notes body text moved into slot |
+| Pickup "ADDITIONAL INFO" label + rows frame | `1067:20827` | Additional info rows frame moved into slot |
+| Delivery "NOTES" label + notes body text | `1067:20842` | Notes body text moved into slot |
+
+**Key implementation detail:** For Vehicle Data, rows were placed directly into the slot (not the card wrapper frame) to avoid nested `Background/Subtle` backgrounds. The card wrapper was then deleted; the Section Base slot frame provides the rounded card appearance.
+
+**Slot discovery:** `inst.findOne(n => n.name === "Slot")` reliably finds the slot frame inside each Section Base instance.
 
 ---
 

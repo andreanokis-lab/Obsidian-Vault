@@ -81,8 +81,10 @@ Shows all inspection data (pickup + delivery) from all drivers, all child orders
 - Buttons: "Retry failed" (Button Size=M, Type=Ghost, Role=Negative) + "Download all" (Button Size=M, Type=Ghost, Role=Default)
 
 ### Vehicle Data Card
-- Frame with `Background/Secondary` fill, `Radius/M` corner radius, `Border/Default` stroke
-- 7 `Info row` instances: VIN, Year · Make · Model, Color, Lot #, Mileage, Keys, Fuel level
+- `Section Base` instance (key `5895cda17f750f1ec4d0aaca86323ce448623c6e`), node `1067:20790`
+- Title = "Vehicle Data"; `Show Title=true`
+- Slot contains: 7 `Info row` instances directly (VIN, Year · Make · Model, Color, Lot #, Mileage, Keys, Fuel level)
+- Rows placed directly in slot — no extra card wrapper — to avoid nested `Background/Subtle` backgrounds
 - Row dividers: `strokeBottomWeight=1` + `Border/Subtle` variable (not Divider component — SF Pro Text workaround)
 
 ### Inspection Sections (Pickup + Delivery)
@@ -101,8 +103,8 @@ Per expanded group body:
   - Error → red × badge + "↺ Retry" label in `Text/Negative`
   - Default + uploading → grey tile + "Uploading…" label in `Text/Status Blue`
   - Sub-label: "PHOTOS · N of M uploaded"
-- **Notes:** `Meta/Caption` label + body text in `Text/Primary`
-- **Additional Info** (Pickup only): Personal items, Accessories, Drivable rows
+- **Notes:** `Section Base` (key `5895cda17f750f1ec4d0aaca86323ce448623c6e`) — Title="Notes"; slot = notes body text. Pickup node `1067:20821`, Delivery node `1067:20842`
+- **Additional Info** (Pickup only): `Section Base` — Title="Additional Info"; slot = rows frame (Personal items, Accessories, Drivable). Node `1067:20827`
 
 ### Download CTA
 - Component: `Button`, Size=L, Type=Primary, Role=Inverse, Icon Only=False
@@ -133,6 +135,8 @@ Per expanded group body:
 
 ## Known gaps / next steps
 
+- [x] Replace manual Notes + Additional Info labels with `Section Base` instances ✓
+- [x] Replace Vehicle Data title + card wrapper with `Section Base` ✓
 - [ ] Install SF Pro Text in Driver App file → re-link `textStyleId` for all text nodes
 - [ ] Build Order Details → Vehicle Details navigation entry point
 - [ ] Build Sync page → Vehicle Details navigation entry point
