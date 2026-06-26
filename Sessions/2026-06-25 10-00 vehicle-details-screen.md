@@ -130,8 +130,8 @@ Four manual label+content pairs replaced with `Section Base` instances via `impo
 - Order Details modification (vehicle row → tap → push Vehicle Details)
 - Sync page modification (vehicle list item → tap)
 - Actual photo image fills (placeholder grey tiles)
-- BOL Sets / vehicle outline diagrams with Damage Markers
+- ~~BOL Sets / vehicle outline diagrams with Damage Markers~~ → completed 2026-06-26
 
 ---
 
-Back to [[Driver App/Driver App|Driver App]] · [[Sessions]]
+Back to [[Driver App/Driver App|Driver App]] · [[Sessions]] · [[Sessions/2026-06-26 vehicle-details-bol-outlines|→ Continued 2026-06-26]]

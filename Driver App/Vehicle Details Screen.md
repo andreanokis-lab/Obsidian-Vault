@@ -91,20 +91,34 @@ Shows all inspection data (pickup + delivery) from all drivers, all child orders
 Each section:
 - Section header: `Section/Title` text + `Space/2XL` gap above
 - Per driver+order group: `Collapse/Expand` (Detent=Full Detent)
-  - Collapsed = "+" icon; Expanded = "∨"
-  - Group label: "Driver Name · Order #XXXXX"
+  - No "+" icon (view-only); `Leading#1584:3` property = " " (space) to suppress it
+  - Only "∨" chevron in Trailing for collapse/expand
+  - Group label: "Driver Name · #ORDERNO.N" (split-order format, e.g. "John D. · #15-1010.1")
+  - `Label#1410:0` property holds the full label string
 
 Per expanded group body:
 - **Damages row:** `Damages` chips, `layoutWrap=WRAP`
   - Driver state (yellow), Customer state (red/orange)
   - Sub-label: count text "· N driver · M customer"
+- **Vehicle outline:** `BOL Sets` (Type=Vehicle Set) instance below chips, 361×609pt
+  - COMPONENT_SET key: `7779808908547ec48d7e6c405dd85362da1283ae`; Type=Vehicle Set key: `873b07a79b7c9b7d28e13418488a63abd20d5d8b`
+  - Wrapped in absolute-layout FRAME (no auto-layout), `layoutSizingHorizontal=FILL`
+  - `Damage-Marker` instances at absolute x/y within wrapper (COMPONENT_SET `be7ad9bb1d0e903165fb8964f8c289a6df9d0621`)
+    - Driver marker key: `4da0762c81edecde4dc4d7fd5a327c5b837a2f99` (yellow); Customer key: `fd4c72ea67e37b4aed60b1a00f7a34334910b1a3` (red); 24×24pt each
+    - `Letter#608:2` TEXT property = damage letter (e.g. "S")
+  - Pickup outline node: `1081:20792` (3 markers); Delivery outline node: `1081:20898` (1 marker)
+  - Marker positions are approximate — designer to fine-tune x,y per damage view
 - **Photos row:** `Content` tiles 112×112pt, 3-per-row, `layoutWrap=WRAP`, 8pt gap
-  - Success → green ✓ badge
-  - Error → red × badge + "↺ Retry" label in `Text/Negative`
-  - Default + uploading → grey tile + "Uploading…" label in `Text/Status Blue`
+  - Success → green ✓ badge; Error → red × badge
+  - Upload/retry state shown via long-press contextual menu only — no overlay labels on tiles
   - Sub-label: "PHOTOS · N of M uploaded"
 - **Notes:** `Section Base` (key `5895cda17f750f1ec4d0aaca86323ce448623c6e`) — Title="Notes"; slot = notes body text. Pickup node `1067:20821`, Delivery node `1067:20842`
-- **Additional Info** (Pickup only): `Section Base` — Title="Additional Info"; slot = rows frame (Personal items, Accessories, Drivable). Node `1067:20827`
+- **Additional Info** (Pickup only): plain BOL-style rows — no Section Base, no card background
+  - "Additional Info" title: `Section/Title` text style, `Text/Primary`, FILL width. Node `1079:20805`
+  - Rows frame: VERTICAL auto-layout, transparent fills, no border radius. Node `1079:20806`
+  - Each row: HORIZONTAL, `paddingTop/Bottom=12` (Space/M), label FILL + value HUG
+  - Label: SF Pro Regular 12pt, `Text/Tertiary`; Value: SF Pro Regular 14pt, `Text/Primary`, right-aligned
+  - Row content: Personal items / Accessories / Drivable
 
 ### Download CTA
 - Component: `Button`, Size=L, Type=Primary, Role=Inverse, Icon Only=False
@@ -135,12 +149,16 @@ Per expanded group body:
 
 ## Known gaps / next steps
 
-- [x] Replace manual Notes + Additional Info labels with `Section Base` instances ✓
+- [x] Replace manual Notes labels with `Section Base` instances ✓
 - [x] Replace Vehicle Data title + card wrapper with `Section Base` ✓
+- [x] Add BOL Sets vehicle outline + Damage-Marker instances to damages blocks ✓
+- [x] Remove photo tile overlay labels ("Uploading…" / "↺ Retry") — now long-press only ✓
+- [x] Collapse/Expand headers: remove "+", use split-order label format (#XXXXX.N) ✓
+- [x] Additional Info: replace Section Base card with plain BOL-style rows ✓
+- [ ] Fine-tune Damage-Marker x,y positions on vehicle outline views
 - [ ] Install SF Pro Text in Driver App file → re-link `textStyleId` for all text nodes
 - [ ] Build Order Details → Vehicle Details navigation entry point
 - [ ] Build Sync page → Vehicle Details navigation entry point
-- [ ] Add BOL Sets / vehicle outline diagram with Damage Markers on damage positions
 - [ ] Fill photo tiles with real image hashes (currently grey placeholders)
 - [ ] Add Maria K. expanded group content (currently collapsed/stub)
 
