@@ -40,7 +40,7 @@ The HaulEx UIKit. Tokens, components, patterns, rules.
 
 **Generic** — [[Design System/Patterns/Form Pattern|Form]] · [[Design System/Patterns/List with Actions Pattern|List with Actions]] · [[Design System/Patterns/Empty State Pattern|Empty State]] · [[Design System/Patterns/Error State Pattern|Error State]] · [[Design System/Patterns/Loading Skeleton Pattern|Loading Skeleton]] · [[Design System/Patterns/Section Header Pattern|Section Header]]
 
-**HaulEx-specific** — [[Design System/Patterns/Camera Capture Flow|Camera Capture Flow]] · [[Design System/Patterns/Take Photo Screen Pattern|Take Photo Screen]] · [[Design System/Patterns/Leaderboard Pattern|Leaderboard]] · [[Design System/Patterns/Sheet Pattern|Sheet]] · [[Design System/Patterns/Filter Search Results Pattern|Filter / Search Results]] · [[Design System/Patterns/Navigation Patterns|Navigation]]
+**HaulEx-specific** — [[Design System/Patterns/Camera Capture Flow|Camera Capture Flow]] · [[Design System/Patterns/Take Photo Screen Pattern|Take Photo Screen]] · [[Design System/Patterns/Photo Viewer Pattern|Photo Viewer]] · [[Design System/Patterns/Leaderboard Pattern|Leaderboard]] · [[Design System/Patterns/Sheet Pattern|Sheet]] · [[Design System/Patterns/Filter Search Results Pattern|Filter / Search Results]] · [[Design System/Patterns/Navigation Patterns|Navigation]]
 
 **Indexes** — [[Design System/Patterns/Patterns|Patterns Index]] · [[Design System/Patterns/_Pattern Evidence Map|Pattern Evidence Map]]
 

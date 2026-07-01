@@ -81,6 +81,7 @@ Compositional guidance — how components combine into common UI. Full index: [[
 **HaulEx-specific:**
 - [[Patterns/Camera Capture Flow|Camera Capture Flow]] — end-to-end photo capture
 - [[Patterns/Take Photo Screen Pattern|Take Photo Screen Pattern]] — static camera layout
+- [[Patterns/Photo Viewer Pattern|Photo Viewer Pattern]] — native iOS 18 viewer for attached/captured photos (portrait + landscape)
 - [[Patterns/Leaderboard Pattern|Leaderboard Pattern]] — Olympic podium + rank list
 - [[Patterns/Sheet Pattern|Sheet Pattern]] — Half / Full / Stack Button / Action Sheet
 - [[Patterns/Filter Search Results Pattern|Filter Search Results Pattern]] — search bar + chips with empty state

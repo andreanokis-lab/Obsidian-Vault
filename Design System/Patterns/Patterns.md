@@ -26,6 +26,7 @@ Evidence for every pattern is verified against the Driver App `DS` page — see 
 | [[Leaderboard Pattern]] | Olympic-podium (2 · 1 · 3) of Places Segments + Leaderboard Row list for ranks 4+ |
 | [[Sheet Pattern]] | Half · Full · Stack Button · Action Sheet — pick by recovery context |
 | [[Filter Search Results Pattern]] | Search Bar + chips composition with the no-results sub-case of the Empty State Pattern |
+| [[Photo Viewer Pattern]] | Native iOS 18 viewer for attached/captured photos — single-photo (portrait) and gallery (landscape) variants sharing one shell |
 
 ---
 

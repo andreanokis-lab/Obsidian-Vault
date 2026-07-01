@@ -137,4 +137,8 @@ The following UIKit components should replace the ad-hoc versions once `SF Pro T
 - [ ] Flash on state
 - [ ] Different mode label variants (Passenger View, Front, Rear)
 
+## Related — photo viewer (post-capture)
+
+Photo viewing after capture is governed by the [[Patterns/Photo Viewer Pattern|Photo Viewer Pattern]] — native iOS 18 translucent chrome over full-bleed photo. The landscape gallery variant of that pattern replaces the legacy `Gallery (Done)` (node `1:31700`); native rebuild wireframe lives at node `1159:10598` directly below it on the Legacy page. The portrait single-photo variant replaces `Image View (Done)` (node `298:33837`); native rebuild at node `1161:10598`.
+
 Back to [[Driver App]].
