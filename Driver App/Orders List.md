@@ -68,6 +68,12 @@ Workaround used:
 
 No hardcoded hex values.
 
+## Curb weight (2026-07-02)
+
+The `Role=Orders` [[Card]] now carries a **curb weight** field, centered between the pickup/delivery clusters, backed by `Curb Weight` (TEXT) + `Show Weight` (BOOLEAN) props. Order cards in the Driver App are remote library instances of the UIKit component, so this appears here only after the UIKit library is **republished + updates accepted** (pending). See [[Sessions/2026-07-02 orders-card-curb-weight|session note]].
+
+> ⚠️ Node `782:20481` (recorded above) no longer resolves in the Driver App file; Order-card instances now live on screens like "Trips" (`1:28891`) on the DS page. Re-audit this screen's node ref.
+
 ## Follow-ups
 
 - **Font**: install `SF Pro Text` on the build host *or* migrate the DS Card / Segment / Nav text styles to use the unified `SF Pro` family. After that, this screen can be rebuilt as live DS instances.

@@ -26,6 +26,13 @@ For a plain card surface without any field structure, use [[Card Base]] directly
 
 Other Role variants swap the text properties and slot composition (Trip number, Mileage, Stops, etc.).
 
+### `Role=Orders` — curb weight
+
+The Orders variant's pickup/delivery row (`SPACE_BETWEEN` horizontal) carries a **third, centered** cluster for curb weight, matching the P/D icon+value treatment:
+- Icon: `Icons/scalemass` (Size=sm) · Value: `Text/Secondary` 15pt · `Text/Tertiary` color · `Space/S` icon→value gap.
+- Added `2026-07-02`. Value bound to `Curb Weight` TEXT prop; group visibility bound to `Show Weight` BOOLEAN (default on).
+- Reads left→right as **pickup date · curb weight · delivery date**. The `scalemass` icon disambiguates it from the date clusters.
+
 ---
 
 ## Variants — `Role`
@@ -60,6 +67,8 @@ Other Role variants swap the text properties and slot composition (Trip number, 
 | `Has Trip` | BOOLEAN | true | Toggle trip section |
 | `Show Progress` | BOOLEAN | true | Toggle progress section |
 | `Show Grabber` | BOOLEAN | true | Toggle the drag grabber |
+| `Curb Weight` | TEXT | "4,398 lb" | Orders variant — curb weight value |
+| `Show Weight` | BOOLEAN | true | Orders variant — toggle the curb weight group |
 | `Slot`, `Slot 2`, `Slot 3` | SLOT × 3 | — | Swap-in zones for badges / status |
 
 ---
