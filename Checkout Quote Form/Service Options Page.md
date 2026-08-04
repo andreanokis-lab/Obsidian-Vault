@@ -117,6 +117,44 @@ Owner picked B, then flagged it as reading "like beta". Diagnosis and fixes:
 | B had silently **dropped the phone number** that the original `Contact Info` carried | **Restored** as the fallback action |
 | one flat 13px run, no hierarchy | Three tiers: muted question `#6B7280` → accent button `#C81E1E` → dark number `#111827` |
 
+### ⚠️ What this section is actually for — price-objection recovery
+
+**Corrected by the owner 2026-08-04, and it changes the whole brief.** Every earlier draft read this
+as a *choice* problem ("Not sure which option fits?" — help the user pick between three tiers). It
+isn't. The real job is **catching the customer whose reaction to the number is to close the tab**:
+
+- the price came back higher than they hoped, **or**
+- the auto-quote generated wrong from the details they entered, **or**
+- they just don't like the price.
+
+**Desired outcome: they pick up the phone instead of bouncing.** Not "they understand the tiers."
+
+Confusion copy and price-shock copy are opposites — "let me help you choose" vs "this number isn't
+final and asking costs you nothing." Three conditions or they still leave:
+
+1. **Name the objection in their own words.** They're already thinking "that's too much." Saying it
+   out loud is what interrupts the exit; an unspoken objection just becomes a bounce.
+2. **Give a legitimate reason the number could be wrong.** The quote is auto-generated from
+   user-entered details, and the rail's own disclaimer already says final cost depends on vehicle
+   condition, modifications, and handling. So "estimate" is *honest and already on the page* — it
+   doesn't undercut the three prices above.
+3. **Make calling feel free.** Anyone spooked by a price will not click something that smells like a
+   salesperson. "free", "no obligation" is load-bearing, not filler.
+
+**Final copy:**
+> **Price not working for you?** (14 SemiBold `#111827`)
+> Quotes are estimates — we can review yours, free. (13 Regular `#6B7280`)
+> → button: **Call (360) 539 8600**
+
+"Price not working for you?" was chosen over the sharper "Price higher than you expected?" because it
+covers all three cases (too high · generated wrong · just doesn't suit) without presuming which,
+and "not working" implies it can be worked on.
+
+**The phone number moved *into* the button.** Since the goal is a call, the accented control and the
+number are now the same object — nothing to hunt for, and it becomes a `tel:` link on mobile. The
+separate "or call …" text was deleted as redundant. Avoid a second competing action here; two CTAs
+dilute the one behaviour this section exists to produce.
+
 ### The button stays — it wasn't the control that was wrong
 
 First pass replaced the outlined button with a red text link, on the theory that a 37px control
@@ -125,20 +163,49 @@ mismatch was the *missing structure*, not the control. Once the full-width rule 
 the text has hierarchy, a 37px button reads as a deliberate footer action rather than a chip
 floating in whitespace. The link version was solving the wrong problem.
 
-**Final action:** `Button` instance 437:12885 — `Color=Red · Size=sm · Outline=True · State=Default`
-(variant 2:1154), 148×37, label "Talk to a specialist" 14 SemiBold, border + label `#C81E1E`,
-`cornerRadius` overridden 8 → 4, both icon booleans off.
+**Final action:** `Button — Call` **437:12904** — `Color=Red · Size=l · Outline=True · State=Default`
+(variant **2:1146**), **245×45**, radius 4, padding V 12/12, label "Call (360) 539 8600" **14
+SemiBold** `#C81E1E`, 1px `#C81E1E` border, both icon booleans off. *(No phone icon exists in the
+file — the whole icon library is `plus`, `forward`, `arrow-up`, `chevron-down`. A phone glyph before
+the number would strengthen it but needs a new asset.)*
 
-**Structure** (layer tree flattened — the `Ask` and `Link` wrapper frames were deleted):
-`Pricing Help — B` at x=315 y=862, w=921, h=58, VERTICAL auto-layout, gap 20, counter-axis CENTER.
-Children: full-width rule (`layoutAlign: STRETCH`), then `Line` — HORIZONTAL, gap 16, counter-axis
-CENTER — holding exactly three siblings: question text · Button · phone text.
+#### Why these exact numbers — "make it more consistent"
 
-The 1×14 vertical hairline that separated link from phone was **removed** — redundant once a bordered
-control sits between them.
+Owner rejected the first button as inconsistent. Measuring against the page's *only* other button
+(the card CTA 434:7797) showed three real outliers, not a taste problem:
 
-**Rhythm:** 28.5 above / 30 below, near-even. The rule now does the anchoring, so the block no
-longer needs to be biased toward the cards to signal it belongs to them.
+| | Card CTA (434:7797) | first attempt | now |
+|---|---|---|---|
+| size | 245×45 | 229×**37** | **245×45** ✓ |
+| padding V | 12/12 | **8/8** | 12/12 ✓ |
+| label weight | **SemiBold** | **Medium** | SemiBold ✓ |
+| label size | 14 | 14 | 14 ✓ |
+| radius | 4 | 4 | 4 ✓ |
+
+`Size=sm` (37px) is a height that appears **nowhere else on the page** — that alone made it read as
+foreign. The fix is geometric parity with the card CTAs: identical width, height, padding, radius and
+type, differing *only* in fill weight (outline vs filled). Same button, quieter voice.
+
+**⚠️ DS defect found:** the `Button` set's **`Outline=True` variants use Poppins Medium while the
+filled variants use SemiBold**. The first button inherited Medium silently. Any outline instance needs
+its label weight overridden to SemiBold until the set is fixed — see follow-ups.
+
+Note `Size=l Outline=True` (2:1146) natively renders 182×48, radius 8, label **16 Medium** — so this
+instance overrides height 48 → 45, radius 8 → 4, label 16 → 14 and Medium → SemiBold. The card CTAs
+do the same 48 → 45 and 16 → 14 overrides, so heavy overriding is this page's existing convention,
+not a shortcut.
+
+**Structure** — `Price Objection — B` (436:12872) at x=315 y=858, w=921, h=64,
+VERTICAL auto-layout, gap 20, counter-axis CENTER. Children:
+1. full-width 1px `#E5E7EB` rule (`layoutAlign: STRETCH`)
+2. `Line` — HORIZONTAL, gap 20, counter-axis CENTER — two siblings only:
+   `Copy` (VERTICAL, gap 2: headline + subline) · `Button — Call`
+
+Wrapper frames `Ask` and `Link` and the 1×14 vertical hairline were all deleted along the way —
+the tree is intentionally flat for handoff.
+
+**Rhythm:** 24.5 above / 26 below. Reviews block stays at y=950 — the 66px block still fits the
+116.5px gap without moving anything.
 
 **Accent:** `#C81E1E` border + label on white = 5.74:1 ✓ AA. Still the only red *outline* on the
 page, so it carries accent without joining the three filled `#FB3D37` "Choose …" CTAs.
@@ -156,8 +223,11 @@ already red text) · gray fill (would bond visually with the reviews block below
 (creates a fourth equal CTA and flattens the three-way comparison).
 
 ## Follow-ups
-- [ ] Decide the band (A assist band / B inline one-liner / C inverted dark).
-- [ ] Copy: "Contact sales" is B2B register for a consumer car-shipping funnel — "Talk to a specialist" fits better.
+- [x] ~~Decide the band~~ → **B, refined** (see above).
+- [ ] **Fix the `Button` set: `Outline=True` variants use Poppins Medium, filled use SemiBold.** Every
+      outline instance silently inherits the wrong weight. Pick one weight for the whole set.
+- [ ] Apply `Price Objection — B` (436:12872) to the real frame 434:7727 and delete the three option clones + section 435:12841.
+- [ ] Add a **phone glyph** component — none exists, so the call CTA is text-only.
 - [ ] Fix the filled-red AA failure → `#E02424`.
 - [ ] Third tier card is 317 vs 297 — confirm intentional.
 - [ ] Reconcile `#FB3D37` against the Flowbite red ramp, or document it as a brand override.
