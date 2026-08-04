@@ -112,23 +112,36 @@ Owner picked B, then flagged it as reading "like beta". Diagnosis and fixes:
 
 | Read as unfinished because | Fix |
 |---|---|
-| 37px outlined button inside a 20px whisper row — the control outweighed everything around it | **Replaced with a text link**: "Talk to a specialist" 13 SemiBold `#C81E1E` + 11px right chevron |
-| lone 17px `#6B7280` person glyph sat at the same value as the text — read as noise, and "person" ≠ "specialist" | **Removed the icon entirely** |
 | row floated in dead space, closer to the reviews block than to the cards it belongs to | **1px `#E5E7EB` rule at full 921 width above it** — makes it the pricing block's footer, not an orphan |
-| B had silently **dropped the phone number** that the original `Contact Info` carried | **Restored**, separated by a 1×14 `#E5E7EB` vertical rule |
-| one flat 13px run, no hierarchy | Three tiers: muted question `#6B7280` → accent action `#C81E1E` → dark number `#111827` |
+| lone 17px `#6B7280` person glyph sat at the same value as the text — read as noise, and "person" ≠ "specialist" | **Removed the icon entirely** |
+| B had silently **dropped the phone number** that the original `Contact Info` carried | **Restored** as the fallback action |
+| one flat 13px run, no hierarchy | Three tiers: muted question `#6B7280` → accent button `#C81E1E` → dark number `#111827` |
 
-**Structure:** `Pricing Help — B` at x=315 y=864, w=921, VERTICAL auto-layout, gap 20,
-counter-axis CENTER, height 41 (hugs). Children: full-width rule (`layoutAlign: STRETCH`), then
-`Line` — HORIZONTAL gap 16 — holding `Ask` (nested HORIZONTAL gap 6: question + `Link` gap 5) ·
-vertical rule · phone text.
+### The button stays — it wasn't the control that was wrong
 
-**Rhythm:** 30.5 above / 45 below. Deliberately not centered in the 116.5px gap — weighting it
-toward the cards signals it belongs to the pricing decision; the larger gap below separates it from
-the reviews section.
+First pass replaced the outlined button with a red text link, on the theory that a 37px control
+inside a 20px row was the mismatch. **Owner overruled: keep the button.** Correct call — the
+mismatch was the *missing structure*, not the control. Once the full-width rule anchors the row and
+the text has hierarchy, a 37px button reads as a deliberate footer action rather than a chip
+floating in whitespace. The link version was solving the wrong problem.
 
-**Accent now comes from the red link text, not a box.** `#C81E1E` on white = 5.74:1 ✓ AA, and it's
-the only red text in the main column, so it draws the eye with no container at all.
+**Final action:** `Button` instance 437:12885 — `Color=Red · Size=sm · Outline=True · State=Default`
+(variant 2:1154), 148×37, label "Talk to a specialist" 14 SemiBold, border + label `#C81E1E`,
+`cornerRadius` overridden 8 → 4, both icon booleans off.
+
+**Structure** (layer tree flattened — the `Ask` and `Link` wrapper frames were deleted):
+`Pricing Help — B` at x=315 y=862, w=921, h=58, VERTICAL auto-layout, gap 20, counter-axis CENTER.
+Children: full-width rule (`layoutAlign: STRETCH`), then `Line` — HORIZONTAL, gap 16, counter-axis
+CENTER — holding exactly three siblings: question text · Button · phone text.
+
+The 1×14 vertical hairline that separated link from phone was **removed** — redundant once a bordered
+control sits between them.
+
+**Rhythm:** 28.5 above / 30 below, near-even. The rule now does the anchoring, so the block no
+longer needs to be biased toward the cards to signal it belongs to them.
+
+**Accent:** `#C81E1E` border + label on white = 5.74:1 ✓ AA. Still the only red *outline* on the
+page, so it carries accent without joining the three filled `#FB3D37` "Choose …" CTAs.
 
 **Icon note:** no right-arrow component exists. `forward` (31:13889) is a *curved reply* arrow —
 wrong semantics. Used `chevron-down` (31:13903) with `rotation = 90` to point right. Square icons
