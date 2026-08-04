@@ -70,6 +70,18 @@ The HaulEx Customer Portal / My Orders (web).
 
 ---
 
+## Checkout / Quote Form
+
+The post-lead-form booking funnel (web, white-label skin — not HaulEx-branded).
+**Figma:** [CHECKOUT / QUOTE FORM](https://www.figma.com/design/ABPgXbgmJ7MfISH38GmnBQ/CHECKOUT-QUOTE-FORM)
+
+**Screens** — [[Checkout Quote Form/Service Options Page|Service Options (step 1)]]
+
+⚠️ Uses a **Flowbite** palette + custom red `#FB3D37`, and its own local `Button` set — a separate
+system from the iOS UIKit and from [[HaulEx-Web]]. Don't cross-apply tokens.
+
+---
+
 ## Sessions
 
 Chronological log of design-system work sessions. → [[Sessions]]

@@ -1,0 +1,105 @@
+---
+type: screen
+status: in-review
+figma: CHECKOUT/QUOTE FORM — `ABPgXbgmJ7MfISH38GmnBQ` · frame "Service Options" 434:7727 (1920×1376)
+---
+
+# Checkout / Quote — Service Options (step 1)
+
+First page after the lead form redirect. Client picks one of three service tiers; the right rail
+carries the locked quote context. Brand shown is a **white-label** skin (Diesel Auto Express),
+not HaulEx — HaulEx appears only as a trust logo in the reviews strip.
+
+Steps: **Plan** (this page) → Pickup → Delivery → Pay.
+
+## Layout grid (exact, read from the file 2026-08-04)
+
+| Region | node | x | y | w | h |
+|---|---|---|---|---|---|
+| Page frame | 434:7727 | — | — | 1920 | 1376 |
+| Price-type toggle (Regular/Cash) | 434:8187 | 315 | 218 | 240 | 42 |
+| Pricing Options (3 cards) | 434:7731 | 315 | 279.5 | 921 | 554 |
+| Contact Info (weak text block) | 434:7728 | 315 | 854 | 352 | 61 |
+| Reviews / trust block | 434:8106 | 315 | 950 | 921 | 397 |
+| Shipping Details rail | 434:7954 | 1266 | 230 | 344 | 1117 |
+
+- Content margin **315** both sides; main column **921**; rail **344**; gutter **30**.
+- Cards: 297 / 297 / **317** wide — the third is 20px wider than its siblings. Likely unintentional.
+- Cards bottom = 833.5, reviews top = 950 → only **116.5px** of vertical space between them.
+
+## Colors (sampled, not guessed)
+
+The palette is **Flowbite** (gray-50 `#F9FAFB`, gray-100 `#F3F4F6`, gray-200 `#E5E7EB`,
+gray-500 `#6B7280`, blue-600 `#1C64F2`) with **one off-palette custom red**.
+
+| Role | Value | Where |
+|---|---|---|
+| Commit / CTA red | **`#FB3D37`** (custom — not a Flowbite stop) | the three "Choose …" button fills |
+| Outline red | **`#C81E1E`** (Flowbite red-700) | Button `Outline=True` border + label |
+| Selection blue | **`#1C64F2`** | Prime card's 2px border · phone link |
+| Card surface | `#F9FAFB` + 1px `#E5E7EB`, radius 4 | all three tier cards |
+| Reviews surface | `#F3F4F6` + 1px `#E5E7EB`, radius 4 | trust block |
+
+**Two accents carry two different meanings** — red = commit, blue = selected/link. Anything new on
+this page has to pick one deliberately. A blue element reads as "selectable option"; a red one reads
+as "commit now".
+
+**Surface ladder:** page `#FFFFFF` → cards `#F9FAFB` → reviews `#F3F4F6`. Plain white is *unused as
+a container*, which makes it available for a new object class that must not read as a card.
+
+## ⚠️ `#FB3D37` fails WCAG AA
+
+White 14px SemiBold on `#FB3D37` = **3.61:1**. AA needs 4.5:1 for text this size. This affects all
+three existing "Choose …" buttons — pre-existing, not introduced by any new work.
+
+Fixes that keep the hue: **`#E02424`** (Flowbite red-600) = 4.72:1 ✓ · `#C81E1E` (red-700) = 5.74:1 ✓.
+The component set's own `Outline=True` red is already `#C81E1E`, so the outline variants pass by
+construction — only the filled ones are short.
+
+## Local `Button` component set
+
+A real variant set in this file, richer than the page currently uses:
+
+| Axis | Options |
+|---|---|
+| **Color** | Green · Red · White · Primary · Alternative · Alternative Dark · Dark · Gray |
+| **Size** | xs (34) · sm (37) · base (41) · l (48) · xl (52) |
+| **State** | Default · Hover · Focus |
+| **Outline** | False · True |
+| **Icon only** | False · True |
+
+Plus text/icon props (`Button text`, `Show left/right icon`, `Left/Right icon style`).
+
+- **`Outline=True` already exists** — border + label `#C81E1E`, no fill, radius **8**, gap 8.
+  A lower-emphasis red CTA needs no new component, just a property flip.
+- Radius mismatch: outline variants are **radius 8**, but the card instances are overridden to
+  **radius 4** to match the cards. Override to 4 for anything on this page.
+- Card buttons are `Color=Red, Size=l, Outline=False` at 245×**45** — note `Size=l` is 48 in the set,
+  so the instances are also height-overridden.
+
+## Open item — CTA under the prices
+
+`Contact Info` (434:7728) is currently 12px gray body copy + a blue phone number, 352px wide in a
+921px column. It has no visual weight and the blue number is the page's only stray link.
+
+**Proposed (pending approval):** replace with a horizontal *assist band*, x=315 w=921 h=84, white
+fill, 1px `#E5E7EB`, radius 4, 4px `#FB3D37` left edge; icon + two-line copy left, phone + a
+`Color=Red Size=base Outline=True` button right. Requires pushing the reviews block from y=950 to
+~974 to keep a 32px gap.
+
+The constraint driving every choice: it must **not** read as a fourth service tier. Four axes of
+separation — horizontal not vertical · outline not filled · white not gray · no price, no star, no
+checkmark list (the three signatures of a tier card here).
+
+Rejected: red-tinted fill (`#FEF2F2` bands read as error states, and the rail's disclaimer is
+already red text) · gray fill (would bond visually with the reviews block below) · filled red button
+(creates a fourth equal CTA and flattens the three-way comparison).
+
+## Follow-ups
+- [ ] Decide the band (A assist band / B inline one-liner / C inverted dark).
+- [ ] Copy: "Contact sales" is B2B register for a consumer car-shipping funnel — "Talk to a specialist" fits better.
+- [ ] Fix the filled-red AA failure → `#E02424`.
+- [ ] Third tier card is 317 vs 297 — confirm intentional.
+- [ ] Reconcile `#FB3D37` against the Flowbite red ramp, or document it as a brand override.
+
+Back to [[Hub]].
