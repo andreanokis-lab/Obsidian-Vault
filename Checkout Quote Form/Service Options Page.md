@@ -82,10 +82,29 @@ Plus text/icon props (`Button text`, `Show left/right icon`, `Left/Right icon st
 `Contact Info` (434:7728) is currently 12px gray body copy + a blue phone number, 352px wide in a
 921px column. It has no visual weight and the blue number is the page's only stray link.
 
-**Proposed (pending approval):** replace with a horizontal *assist band*, x=315 w=921 h=84, white
-fill, 1px `#E5E7EB`, radius 4, 4px `#FB3D37` left edge; icon + two-line copy left, phone + a
-`Color=Red Size=base Outline=True` button right. Requires pushing the reviews block from y=950 to
-~974 to keep a 32px gap.
+**Three variants built 2026-08-04** in section `CTA options under prices — A / B / C` (435:12841),
+at canvas x=-14280 y=965 — full clones of the page, one per option, for in-context comparison:
+
+| Opt | Frame | Band | Treatment |
+|---|---|---|---|
+| **A** assist band | 435:11265 | 435:11775 | 921×84 @ y=858 · white · 1px `#E5E7EB` · radius 4 · 4px `#FB3D37` left edge · `Color=Red Size=base Outline=True` button · reviews → y=974 |
+| **B** inline one-liner | 435:11793 | 435:12303 | 921×40 @ y=880 · no container · centered · `Size=sm Outline=True` button · reviews unmoved |
+| **C** inverted dark | 435:12314 | 435:12824 | 921×84 @ y=858 · `#111827` fill · `Color=White Outline=False` button · reviews → y=974 |
+
+Shared: 40px icon badge (`#FEF2F2` / `#374151`) reusing the *24/7 Customer Support* person glyph
+cloned from 434:8088 — the icon library has no headset or phone component (only `plus`, `forward`,
+`arrow-up`, `chevron-down`). Copy: "Not sure which option fits?" + "Talk to a transport specialist —
+free, no obligation." Phone set as one text node with a range override (13 Regular `#6B7280` label,
+15 SemiBold number).
+
+### Two build gotchas worth remembering
+1. **The `Button` set defaults `Show left icon` / `Show right icon` to ON**, with a flame glyph — a
+   fresh `createInstance()` renders 🔥 either side of the label. Must explicitly set both false.
+2. **Recoloring a cloned icon instance:** setting `fills` on the instance node paints its *frame
+   background* → a solid square. Set `fills = []` on the instance and recolor only its `VECTOR`
+   descendants.
+
+Also: instance `cornerRadius` must be overridden 8 → 4 per this page's convention.
 
 The constraint driving every choice: it must **not** read as a fourth service tier. Four axes of
 separation — horizontal not vertical · outline not filled · white not gray · no price, no star, no
