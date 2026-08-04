@@ -88,7 +88,7 @@ at canvas x=-14280 y=965 — full clones of the page, one per option, for in-con
 | Opt | Frame | Band | Treatment |
 |---|---|---|---|
 | **A** assist band | 435:11265 | 435:11775 | 921×84 @ y=858 · white · 1px `#E5E7EB` · radius 4 · 4px `#FB3D37` left edge · `Color=Red Size=base Outline=True` button · reviews → y=974 |
-| **B** inline one-liner | 435:11793 | 435:12303 | 921×40 @ y=880 · no container · centered · `Size=sm Outline=True` button · reviews unmoved |
+| **B** inline one-liner ✅ **chosen** | 435:11793 | ~~435:12303~~ → **436:12872** | see *Refined B* below |
 | **C** inverted dark | 435:12314 | 435:12824 | 921×84 @ y=858 · `#111827` fill · `Color=White Outline=False` button · reviews → y=974 |
 
 Shared: 40px icon badge (`#FEF2F2` / `#374151`) reusing the *24/7 Customer Support* person glyph
@@ -105,6 +105,34 @@ free, no obligation." Phone set as one text node with a range override (13 Regul
    descendants.
 
 Also: instance `cornerRadius` must be overridden 8 → 4 per this page's convention.
+
+### Refined B — the chosen direction (`Pricing Help — B` 436:12872)
+
+Owner picked B, then flagged it as reading "like beta". Diagnosis and fixes:
+
+| Read as unfinished because | Fix |
+|---|---|
+| 37px outlined button inside a 20px whisper row — the control outweighed everything around it | **Replaced with a text link**: "Talk to a specialist" 13 SemiBold `#C81E1E` + 11px right chevron |
+| lone 17px `#6B7280` person glyph sat at the same value as the text — read as noise, and "person" ≠ "specialist" | **Removed the icon entirely** |
+| row floated in dead space, closer to the reviews block than to the cards it belongs to | **1px `#E5E7EB` rule at full 921 width above it** — makes it the pricing block's footer, not an orphan |
+| B had silently **dropped the phone number** that the original `Contact Info` carried | **Restored**, separated by a 1×14 `#E5E7EB` vertical rule |
+| one flat 13px run, no hierarchy | Three tiers: muted question `#6B7280` → accent action `#C81E1E` → dark number `#111827` |
+
+**Structure:** `Pricing Help — B` at x=315 y=864, w=921, VERTICAL auto-layout, gap 20,
+counter-axis CENTER, height 41 (hugs). Children: full-width rule (`layoutAlign: STRETCH`), then
+`Line` — HORIZONTAL gap 16 — holding `Ask` (nested HORIZONTAL gap 6: question + `Link` gap 5) ·
+vertical rule · phone text.
+
+**Rhythm:** 30.5 above / 45 below. Deliberately not centered in the 116.5px gap — weighting it
+toward the cards signals it belongs to the pricing decision; the larger gap below separates it from
+the reviews section.
+
+**Accent now comes from the red link text, not a box.** `#C81E1E` on white = 5.74:1 ✓ AA, and it's
+the only red text in the main column, so it draws the eye with no container at all.
+
+**Icon note:** no right-arrow component exists. `forward` (31:13889) is a *curved reply* arrow —
+wrong semantics. Used `chevron-down` (31:13903) with `rotation = 90` to point right. Square icons
+rotate safely inside auto-layout (bounding box unchanged).
 
 The constraint driving every choice: it must **not** read as a fourth service tier. Four axes of
 separation — horizontal not vertical · outline not filled · white not gray · no price, no star, no
