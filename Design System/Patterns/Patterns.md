@@ -16,8 +16,8 @@ Evidence for every pattern is verified against the Driver App `DS` page — see 
 | [[Error State Pattern]] | Inline field, inline section, modal confirmation, full-screen — picked by recovery path |
 | [[Loading Skeleton Pattern]] | Native iOS activity indicator vs the one documented skeleton (Leaderboard Titles `Place=Skeleton`) |
 | [[Section Header Pattern]] | Plain title · title + trailing action · or full Action Section component |
-| [[Context Menu Pattern]] | Anchored dropdown — [[Select]] trigger + [[Menu]] popover for single-value picks (sort, filter, status) |
-| [[Action Picker Pattern]] | Bottom-anchored iOS Action Sheet for 3–5 actions on the current target, with mandatory Cancel |
+| [[Context Menu Pattern]] | Anchored dropdown — [[Select]] trigger + [[Menu]] popover. **1–4 items or actions.** |
+| [[Action Picker Pattern]] | Bottom sheet of actions with mandatory Cancel. **5+ items or actions.** |
 
 ## HaulEx-specific patterns
 
@@ -41,7 +41,7 @@ Evidence for every pattern is verified against the Driver App `DS` page — see 
 - An **Error** at the screen level → [[Error State Pattern]] · Full-screen sub-pattern (mirrors Empty State layout).
 - **Loading** that takes longer than ~250ms → [[Loading Skeleton Pattern]]. The Leaderboard uses the Titles `Place=Skeleton`.
 - **Camera Capture Flow** wraps around the [[Take Photo Screen Pattern]] composition.
-- **Context Menu vs Action Picker vs Sheet**: pick by intent + count. Value pick, ≤ 7, anchored → [[Context Menu Pattern]]. 3–5 verbs on a target, needs Cancel → [[Action Picker Pattern]]. > 7 options or rows with helper text → [[Sheet Pattern]] · Half Sheet + list.
+- **Context Menu vs Action Picker vs Sheet — pick by count**: **1–4** items or actions → [[Context Menu Pattern]] (anchored popover). **5+** → [[Action Picker Pattern]] (bottom sheet with actions + Cancel). Scrolls (~8+), or rows need avatars / helper text / search → [[Sheet Pattern]] · Half Sheet + list. A destructive **confirmation** is never a picker — it's a [[Sheet Pattern|Stack Button Sheet]] regardless of count.
 
 ---
 

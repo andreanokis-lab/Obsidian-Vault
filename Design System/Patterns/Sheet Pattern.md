@@ -14,12 +14,13 @@ The Sheet itself is an organism (out of scope for individual component docs); th
 > **Half sheet** = user returns to the same screen
 > **Full sheet** = user enters a new context
 > **Stack Button sheet** = confirm a single decision (especially destructive)
-> **Action Sheet** = pick one of 3–5 actions from a list
+> **Action Sheet** = pick from a list of **5+** actions — see [[Action Picker Pattern]]
 
 If dismissing the sheet puts the user back where they were → Half.
 If the sheet feels like a new "page" → Full.
 If the user must say yes/no to one thing → Stack Button.
-If the user picks from a short menu of actions → Action Sheet.
+If the user picks from a list of 5+ actions → Action Sheet.
+If the list is only 1–4 items → not a sheet at all; use the [[Context Menu Pattern]].
 
 ---
 
@@ -106,15 +107,16 @@ A half sheet whose only content is a title / message + 2–3 stacked Buttons. Th
 
 ## Variant 4 — Action Sheet
 
-iOS native action list — 3–5 actions stacked vertically, anchored to the bottom of the screen. Used to pick one action from a short menu.
+iOS native action list — 5 or more actions stacked vertically, anchored to the bottom of the screen. Below 5 items this is a [[Context Menu Pattern|Context Menu]], not a sheet.
 
 **Use when:**
-- 3–5 actions on the same target (e.g., "Edit photo / Replace / Delete / Cancel")
+- **5+ actions** on the same target
 - One destructive option among neutral options
 
 **Don't use when:**
-- Only 2 actions → Stack Button Sheet
-- 6+ actions → use a Half Sheet with a `[[Components/Menu|Menu]]` list inside
+- 1–4 actions → [[Context Menu Pattern]] (anchored popover, no sheet)
+- Confirming a single decision → Stack Button Sheet
+- The list would scroll (~8+), or rows need avatars / helper text → Half Sheet with a list inside
 
 iOS native: `UIAlertController` with `.actionSheet` style. The DS doesn't ship a custom Action Sheet — use the system one.
 
@@ -194,7 +196,8 @@ Verified against the Driver App DS page on 2026-05-21. See [[_Pattern Evidence M
 
 ## Don't
 
-- ❌ Don't stack 4+ buttons in a Stack Button Sheet — switch to Action Sheet or list-based Half Sheet.
+- ❌ Don't stack 4+ buttons in a Stack Button Sheet — switch to an [[Action Picker Pattern|Action Sheet]] or a list-based Half Sheet.
+- ❌ Don't present an Action Sheet for 1–4 options — use the [[Context Menu Pattern]].
 - ❌ Don't use a Full Sheet for a single-line confirmation — it feels heavy.
 - ❌ Don't block swipe-to-dismiss unless the user has unsaved data — and then prompt before dismissing.
 - ❌ Don't put a Navigation Bar inside a Half Sheet — use Title and Controls header instead.

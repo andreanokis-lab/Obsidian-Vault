@@ -1,6 +1,8 @@
 # Menu
 
-Vertical container of up to 12 [[Menu Item]] rows + 1 destructive item — appears on tapping a [[Select]] or as a contextual popover anchored to a control. Items are toggleable via `Show Item N` instance properties.
+Vertical container of [[Menu Item]] rows + 1 destructive item — appears on tapping a [[Select]] or as a contextual popover anchored to a control. Items are toggleable via `Show Item N` instance properties.
+
+The component ships 12 slots, but the **pattern caps usage at 4 visible rows** (destructive included). At 5+ items use the [[Action Picker Pattern]] instead.
 
 See [[Context Menu Pattern]] for the full anchored-dropdown composition rules and when to use this vs. an [[Action Picker Pattern]] or a [[Sheet Pattern|Half Sheet list]].
 
@@ -47,14 +49,14 @@ Override each visible row's inner `Label Text` / `Symbol` through the row's nest
 
 - ✅ Use Menu when a [[Select]] or a more / overflow button opens a list of options.
 - ✅ Show only the items relevant to the current context — hide the rest via `Show Item N=false`.
-- ✅ Keep menus short — Apple HIG recommends 5–7 options for scannability. The 12-item ceiling is for edge cases.
+- ✅ Keep to **1–4 visible rows** including the destructive row — see [[Context Menu Pattern]]. At 5+ the list belongs in an [[Action Picker Pattern]], not a Menu.
 - ✅ Use the Destructive item at the end of the menu and only when a destructive action is contextually available.
 - ✅ Override the last visible row's `Stroke=None` to remove the trailing divider line.
 
 ## Don't
 
 - ❌ Don't use Menu for navigation between screens — use a sheet, tab bar, or list row with chevron.
-- ❌ Don't fill all 12 slots just because they exist — fewer choices = better usability.
+- ❌ Don't fill all 12 slots just because they exist — the pattern ceiling is **4**. The extra slots exist for legacy layouts, not as a target.
 - ❌ Don't put multi-line content in menu items — Menu Items are sized for single labels.
 - ❌ Don't anchor the Menu to nothing — every menu should have a clear trigger ([[Select]], an icon button, a long-press target).
 
