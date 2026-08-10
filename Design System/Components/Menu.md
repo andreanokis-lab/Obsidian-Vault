@@ -2,6 +2,8 @@
 
 Vertical container of up to 12 [[Menu Item]] rows + 1 destructive item — appears on tapping a [[Select]] or as a contextual popover anchored to a control. Items are toggleable via `Show Item N` instance properties.
 
+See [[Context Menu Pattern]] for the full anchored-dropdown composition rules and when to use this vs. an [[Action Picker Pattern]] or a [[Sheet Pattern|Half Sheet list]].
+
 - **Component node:** `937:4113`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=937-4113)
 - **Figma section:** `----- Select + Dropdown` → "Menu"

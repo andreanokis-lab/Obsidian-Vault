@@ -4,6 +4,8 @@ Tappable pill that opens a [[Menu]] or picker — shows the current selection + 
 
 For free-text entry use [[Input]]. For inline binary toggles use [[Toggle]].
 
+See [[Context Menu Pattern]] for how Select composes with [[Menu]] into an anchored dropdown, and how that differs from an [[Action Picker Pattern|Action Picker]].
+
 - **Component set node:** `307:1122`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=307-1122)
 - **Figma section:** `----- Select + Dropdown` → "Select"

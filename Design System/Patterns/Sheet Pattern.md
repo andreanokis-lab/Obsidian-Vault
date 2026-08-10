@@ -118,6 +118,8 @@ iOS native action list — 3–5 actions stacked vertically, anchored to the bot
 
 iOS native: `UIAlertController` with `.actionSheet` style. The DS doesn't ship a custom Action Sheet — use the system one.
 
+Full rules for this variant — Cancel handling, destructive placement, when to prefer this over a [[Context Menu Pattern|Context Menu]] — live in [[Action Picker Pattern]].
+
 ---
 
 ## Composition rules
