@@ -69,7 +69,26 @@ The Orders variant's pickup/delivery row (`SPACE_BETWEEN` horizontal) carries a 
 | `Show Grabber` | BOOLEAN | true | Toggle the drag grabber |
 | `Curb Weight` | TEXT | "4,398 lb" | Orders variant — curb weight value |
 | `Show Weight` | BOOLEAN | true | Orders variant — toggle the curb weight group |
+| `Disabled` | BOOLEAN | false | Mute the whole card via a `Background/Primary` overlay @ 55% opacity |
 | `Slot`, `Slot 2`, `Slot 3` | SLOT × 3 | — | Swap-in zones for badges / status |
+
+### `Disabled` — how the overlay works
+
+Rather than adding a new variant axis (which would double variant count 7 → 14), the disabled treatment is a single BOOLEAN that shows/hides a shared **Disabled Overlay** rectangle in every variant's `Card Base`.
+
+| Overlay property | Value |
+|---|---|
+| Node name | `Disabled Overlay` |
+| Fill | `Background/Primary` (semantic token) |
+| Node opacity | `0.55` |
+| Corner radius | bound to `Radius/L` (all four corners) |
+| Layout positioning | `ABSOLUTE` (does not affect Card Base auto-layout) |
+| Constraints | `STRETCH` × `STRETCH` (resizes with Card Base) |
+| Visibility | bound to `Disabled` BOOLEAN prop |
+
+Because the overlay fill is bound to `Background/Primary`, the mute automatically follows the theme — dark mode dims to dark, light mode dims to light. The `0.55` node opacity lets ~45% of the card content bleed through so the driver can still read what they're looking at.
+
+Added `2026-08-10`. Not yet published — republish + accept in consumers.
 
 ---
 
