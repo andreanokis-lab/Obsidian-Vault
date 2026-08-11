@@ -73,8 +73,8 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | Menu | ✅ Built | `937:4113` | Up to 12 items + 1 destructive. Vertical menu container. See [[Components/Menu\|Menu]]. |
 | Collapse / Expand | ✅ Built | `1410:2236` | 2 Detent variants (Full Detent, In Section). Expandable section header. See [[Components/Collapse Expand\|Collapse / Expand]]. |
 | List Column Header | ✅ Built | `1324:3` | 3-column header (UNIT · MAKE · MODEL). See [[Components/List Column Header\|List Column Header]]. |
-| Segment Control | ✅ Built | `321:1008` | 13 combinations (Selected × Segments × Scrollable). iOS-style segmented control. See [[Components/Segment Control\|Segment Control]]. |
-| Controls | ✅ Built | `418:227` | Plus / Minus icon pair for steppers. See [[Components/Controls\|Controls]]. |
+| Segment Control | ✅ Built | `321:1008` | 13 combinations (Selected × Segments × Scrollable). iOS-style segmented control. ⚠️ Hidden trailing `xMark` slot — reviewed 2026-08-11, **do not unhide** (see note). See [[Components/Segment Control\|Segment Control]]. |
+| Controls | ✅ Built | `418:227` | 3 variants — Plus / Minus (steppers) + `xMark` (`2149:4518`, dismiss only). See [[Components/Controls\|Controls]]. |
 | Action Section | ✅ Built | `475:1232` | 2 Type variants (Default, Clear). Section header pill with label + INOP badge + trailing actions. See [[Components/Action Section\|Action Section]]. |
 | Content | ✅ Built | `535:721` | 3 Status variants (Default, Success, Error). Image tile + caption + status badge. See [[Components/Content\|Content]]. |
 | Titles | ✅ Built | `1282:4616` | 3 Place variants (1st Place, 2nd-3nd Places, Skeleton). Podium name block. See [[Components/Titles\|Titles]]. |
