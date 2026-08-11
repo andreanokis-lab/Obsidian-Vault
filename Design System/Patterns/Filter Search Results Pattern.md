@@ -66,7 +66,7 @@ Added 2026-08-11 after the [[Segment Control]] `✕` review. Ranked — use the 
 |---|---|---|---|
 | 1 | **Inside the selection set, as the first segment: `All`** | Single-select filtering via [[Segment Control]]. This is the default answer. | **Leftmost** — widest scope leads, and `All` is the default state so it must not sit at the far edge. Matches [[Orders List]] (`All / Active / Completed`). No separate control exists — selecting `All` *is* the deselect. |
 | 2 | **Empty-state recovery CTA — "Clear filters"** | The filter produced zero results. Already required by this pattern. | [[Button]] `Size=M, Type=Ghost` · centred in the remaining area · copy per [[Content Style Guide]] (`Clear filters` / `Clear search`) |
-| 3 | **[[Navigation Bar]] trailing slot — `Clear`** | Several filter mechanisms are active at once (search + chips + segments) and one screen-level reset is needed. | Text label, never a glyph. Appears only while a filter is active. |
+| 3 | **[[Navigation Bar]] trailing slot — `Clear`** | Several filter mechanisms are active at once (search + chips + segments) and one screen-level reset is needed. | Text label, never a glyph. `Text/Link` — tinted so it reads as a button and not as a second title. Disabled/dimmed while nothing is set. ⚠️ No Nav Bar variant supports a text trailing action yet — see [[Component Status]]. |
 | 4 | **Filter sheet header, Leading slot — `Reset`** | Filters live in a [[Sheet Pattern\|sheet]]. | [[Title and Controls]] · `Reset` in [[Leading (Sheets)]], `Apply` / `Done` in [[Trailing (Sheets)]]. Reset is not the primary action, so Leading is correct here. |
 | 5 | **Per-chip `✕`** | Filters are multi-select / individually removable. | [[Chip]] row, not a Segment Control. The only place a `✕` is legitimate. |
 

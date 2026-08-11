@@ -34,16 +34,33 @@ First reviewed 2026-08-11 from a screenshot; **Figma node not yet recorded** —
 - `Reset` is spatially separated from `Apply`, satisfying the [[Form Pattern]] don't-put-Clear-near-Submit rule.
 - `Apply` is full-width and bottom-anchored per [[Form Pattern]].
 
-## Open findings — 2026-08-11
+## States
 
-| # | Finding | Fix | Strength |
+Two designed: **Order Search Filled** and **Order Search empty**. Both reviewed 2026-08-11 (rev 2).
+
+| State | Fields | Segments | `Reset` |
 |---|---|---|---|
-| 1 | `All` is the **last** segment in both controls | Move to **first**. Widest scope leads, it is the default state, and [[Orders List]] already uses `All / Active / Completed` — the two screens currently disagree. | Convention + internal consistency (not a HIG bullet) |
-| 2 | `Reset` uses a red / destructive treatment | Use `Text/Link` (`#3395FF` dark). Per [[Colors - Semantic]], `Text/Negative` is for validation errors and destructive labels only — resetting a search form destroys nothing. | Vault rule |
-| 3 | Both Segment Controls are **unlabelled** while every Input above has a label | Add field labels (`Order type`, `Status`) in the field-label style, `Space/S` gap. [[Form Pattern]]: *always show the Label on every field*. | Vault rule |
-| 4 | `Reset` is enabled in the pristine state (`All`/`All`, all fields empty) | Disable or hide until ≥1 criterion is set. | Usability |
-| 5 | 4 segments across 361pt ≈ 85pt each; ~80pt at 375pt ([[Rules]] L3) | "Completed" is already tight and breaks at larger Dynamic Type. Use `Scrollable=Yes` (exists only at `Segments=4`) or shorten to "Done". | Check |
-| 6 | Back chevron + bottom `Apply` — unapplied-filter behaviour undefined | Annotate: does back discard? If presented modally, iOS convention is `Cancel` leading, not a chevron. | Flow question |
+| Filled | 6 populated (`53232.1`, `2019 Honda Civic`, `8975632`, `3456H3`, `Massachusetts`, `Seattle`) | `Parent` · `Delivery` | Enabled |
+| Empty (pristine) | all placeholders | `All` · `All` | **Disabled / dimmed** ✅ |
+
+## HIG verdict — Segment Controls pass (rev 2)
+
+No actions inside the control · closely related choices affecting a view state · consistent segment size · all-text content · 4 segments (≤5 on iPhone) · a segment is always selected. Compliant with HIG § Segmented controls and with [[Rules#C5]].
+
+## Findings
+
+| # | Finding | Status (rev 2) | Strength |
+|---|---|---|---|
+| 1 | `All` was the **last** segment in both controls | ✅ **Fixed** — now leading in both, consistent with [[Orders List]] | Convention + internal consistency |
+| 2 | `Reset` used a red / destructive treatment | ⚠️ **Partial** — red removed, but it now matches the title's white and reads as a label, not a button. Apply `Text/Link` (`#3395FF`); keep the dimmed treatment for disabled. | Vault rule ([[Colors - Semantic]]: `Text/Link` = tappable text actions) |
+| 3 | Both Segment Controls are **unlabelled** while all 6 Inputs have labels | ❌ **Open** — add `Order type` and `Status` in the field-label style, `Space/S` gap. [[Form Pattern]]: *always show the Label on every field*. Also leaves VoiceOver with no context for the group. | Vault rule + a11y |
+| 4 | `Reset` enabled in the pristine state | ✅ **Fixed** — dimmed in the empty state | Usability |
+| 5 | 4 segments across 361pt ≈ 76pt each after padding | ⚠️ **Verify** — in the filled state "Completed" nearly touches the container edge. Check at 375pt ([[Rules]] L3) and Dynamic Type XXL. If it truncates: `Scrollable=Yes` (exists only at `Segments=4`) or shorten to "Done". | Check |
+| 6 | Back chevron + bottom `Apply` — unapplied-filter behaviour undefined | ❌ **Open** — annotate: does back discard? If presented modally, iOS convention is `Cancel` leading, not a chevron. | Flow question |
+
+## Intentional deviations
+
+- **`Apply` stays enabled in the pristine state** while `Reset` is disabled. [[Form Pattern]] says to disable submit until minimum required fields are filled, but an empty search legitimately means "show everything". Recorded so the next reviewer doesn't re-flag it.
 
 ## DS gap filed
 
