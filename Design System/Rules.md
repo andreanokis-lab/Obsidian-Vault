@@ -79,7 +79,7 @@ Do not reassemble camera screens until the component build plan (ShutterButton �
 - Express "no filter / show everything" as an explicit **`All`** segment, so one segment is always selected and the control always shows the current state of the view below.
 - If a reset action is genuinely needed, it lives **outside** the control as a text [[Button]] (`Type=Ghost`) or a [[Navigation Bar]] trailing action — with a word, not a glyph.
 
-Ratified 2026-08-11. Full reasoning in [[Segment Control]] · [[Sessions/2026-08-11 segment-control-xmark-review|session note]].
+Ratified 2026-08-11. Full reasoning in [[Segment Control]]; ranked placement table in [[Filter Search Results Pattern]] · [[Sessions/2026-08-11 segment-control-xmark-review|session note]].
 
 ---
 
