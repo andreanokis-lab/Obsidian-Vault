@@ -64,7 +64,7 @@ Added 2026-08-11 after the [[Segment Control]] `✕` review. Ranked — use the 
 
 | # | Placement | When | Spec |
 |---|---|---|---|
-| 1 | **Inside the selection set, as the first segment: `All`** | Single-select filtering via [[Segment Control]]. This is the default answer. | Leftmost segment (widest scope first). No separate control exists — selecting `All` *is* the deselect. |
+| 1 | **Inside the selection set, as the first segment: `All`** | Single-select filtering via [[Segment Control]]. This is the default answer. | **Leftmost** — widest scope leads, and `All` is the default state so it must not sit at the far edge. Matches [[Orders List]] (`All / Active / Completed`). No separate control exists — selecting `All` *is* the deselect. |
 | 2 | **Empty-state recovery CTA — "Clear filters"** | The filter produced zero results. Already required by this pattern. | [[Button]] `Size=M, Type=Ghost` · centred in the remaining area · copy per [[Content Style Guide]] (`Clear filters` / `Clear search`) |
 | 3 | **[[Navigation Bar]] trailing slot — `Clear`** | Several filter mechanisms are active at once (search + chips + segments) and one screen-level reset is needed. | Text label, never a glyph. Appears only while a filter is active. |
 | 4 | **Filter sheet header, Leading slot — `Reset`** | Filters live in a [[Sheet Pattern\|sheet]]. | [[Title and Controls]] · `Reset` in [[Leading (Sheets)]], `Apply` / `Done` in [[Trailing (Sheets)]]. Reset is not the primary action, so Leading is correct here. |
@@ -75,7 +75,10 @@ Added 2026-08-11 after the [[Segment Control]] `✕` review. Ranked — use the 
 - ❌ Inside the [[Segment Control]] container — see [[Rules#C5]].
 - ❌ Icon-only anywhere in a filter context. `✕` reads as *close the screen*.
 - ❌ Immediately adjacent to the control with a tight gap — even outside the container it reads as a segment. If it must sit on the same row, minimum `Space/M` (12pt) outside the container, and it must be a word.
-- ❌ Styled destructive (`Text/Negative`). Clearing a filter destroys nothing.
+- ❌ Styled destructive (`Text/Negative`). Clearing a filter destroys nothing — use `Text/Link`. Red in an iOS nav bar promises a consequence that a filter reset doesn't have.
+- ❌ Enabled in the pristine state. Disable or hide `Clear` / `Reset` until at least one criterion is set.
+
+Worked example with all of this applied (and the mistakes it started with): [[Order Search Screen]].
 
 ---
 

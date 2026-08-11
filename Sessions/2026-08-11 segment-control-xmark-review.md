@@ -36,6 +36,10 @@ Frame `1925:26706` in the Driver App file — two [[Segment Control]] instances 
 
 The HIG citation that decided it: § Segmented controls, Best practices — the bullet forbidding segmented controls from offering actions, whose examples include *removing* content. Recorded verbatim in [[Rules#C5]].
 
+## Applied to a real screen the same session
+
+The owner produced [[Order Search Screen]] with the fix in place — `✕` removed, `All` a real segment, `Reset` as nav-bar text. Reviewed: structurally correct, four residual issues (`All` on the wrong end · red `Reset` · unlabelled Segment Controls · `Reset` live in the pristine state) plus a DS gap — [[Navigation Bar]] has no text trailing action in any of its 6 variants. Details in that note.
+
 ## Verdict — don't ship it
 
 Reasoning recorded in full in [[Segment Control]]. Summary: it mixes an action into a mutually exclusive selection group; "nothing selected" is not a state a segmented control can express (HIG has no deselect affordance, and no first-party iOS UI ships `noSegment`); `✕` already means close/dismiss on iOS; and VoiceOver can't distinguish it from a segment.
