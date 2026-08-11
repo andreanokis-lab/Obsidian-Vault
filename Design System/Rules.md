@@ -74,6 +74,13 @@ Add a row to [[Component Status]] with status `Planned` and describe what you ne
 **C4. Camera components are in progress — use the specs in [[Components - In Progress]].**
 Do not reassemble camera screens until the component build plan (ShutterButton → CameraBottomBar pipeline) is complete.
 
+**C5. A mutually exclusive selection control never carries an action.**
+[[Segment Control]], [[Tab Bar]], [[Page Control]] — every child is a *choice*, never an operation. No `✕`, no trash, no clear/reset glyph inside the container. HIG § Segmented controls states it directly: "Avoid using a segmented control to offer actions" — and names removing content as one of those actions. Two consequences:
+- Express "no filter / show everything" as an explicit **`All`** segment, so one segment is always selected and the control always shows the current state of the view below.
+- If a reset action is genuinely needed, it lives **outside** the control as a text [[Button]] (`Type=Ghost`) or a [[Navigation Bar]] trailing action — with a word, not a glyph.
+
+Ratified 2026-08-11. Full reasoning in [[Segment Control]] · [[Sessions/2026-08-11 segment-control-xmark-review|session note]].
+
 ---
 
 ## A — Accessibility Rules

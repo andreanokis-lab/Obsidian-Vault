@@ -25,9 +25,11 @@ Single VECTOR per variant.
 |---|---|---|
 | `Plus` | `418:200` | Increment icon — typically the right side of a Counter |
 | `Minus` | `418:226` | Decrement icon — typically the left side of a Counter |
-| `xMark` | `2149:4518` | Dismiss / clear glyph. Added later than Plus/Minus. Currently only referenced from the hidden trailing slot inside [[Segment Control]] — see the ⚠️ note there before switching it on. |
+| `xMark` | `2149:4518` | Dismiss / close glyph. Added later than Plus/Minus. |
 
-⚠️ The `xMark` variant reads as **close / dismiss** on iOS (modal close, chip removal, clear-text in a search field). Don't reuse it to mean "clear the current selection" — see [[Segment Control]].
+⚠️ The `xMark` variant reads as **close / dismiss** on iOS (modal close, chip removal, clear-text in a search field). Don't reuse it to mean "clear the current selection."
+
+Its only reference was the hidden trailing slot inside [[Segment Control]], which was **killed on 2026-08-11** ([[Rules#C5]]) — that slot is scheduled for deletion from all 13 variants of `321:1008`. The `xMark` variant itself stays in this set as a legitimate dismiss glyph.
 
 ---
 

@@ -49,7 +49,18 @@ None at the top level — the Tab Item labels inside each segment are overridden
 
 ---
 
-## ⚠️ The trailing `xMark` — reviewed 2026-08-11, verdict: don't ship it
+## ⚠️ The trailing `xMark` — killed 2026-08-11
+
+**Ratified decisions:**
+
+| Decision | Outcome |
+|---|---|
+| How "no filter" is expressed | **Explicit `All` segment.** A 2-choice control becomes `Segments=3` (`All / Sub. 1 / Sub. 2`); `Order / Picked Up / Delivered` needs no clear affordance at all because `Order` is already the default. Generalised as [[Rules#C5]]. |
+| The hidden slot in the master | **Delete from all 13 variants** of `321:1008`, then republish the library. Not promoted to a boolean property — a property would legitimise the pattern. |
+
+Execution status: **pending** — Figma edits not yet applied (both the master cleanup + republish and the two Driver App instances `930:30872` / `930:30878`).
+
+### Why — the original review
 
 Two Driver App instances (`930:30872` 2-segment "Sub. 1 / Sub. 2", `930:30878` 3-segment "Order / Picked Up / Delivered", both inside frame `1925:26706`) have the trailing `xMark` unhidden to act as a "clear the selection" affordance. This is wrong for four reasons:
 
@@ -69,9 +80,11 @@ Two Driver App instances (`930:30872` 2-segment "Sub. 1 / Sub. 2", `930:30878` 3
 | Filters are multi-select or individually removable | Use [[Chip]] rows, not a Segment Control. A removable `✕` is legitimate on a chip. |
 | 5+ options | [[Select]] + [[Menu]]. |
 
-Until this is resolved: **leave the `Controls` layer hidden** and don't add a boolean prop for it (adding the prop legitimises the pattern). If it survives PM review, it must at minimum move outside the container, gain a text label, and get its own accessibility label.
-
 Space cost is also real: at `Segments=4` + `xMark`, segments fall to ~73pt and long labels truncate.
+
+### Prerequisite check before applying the `All` fix
+
+`All` only works if the filter is **single-select**. If any of these controls is meant to allow more than one status at once, it isn't a Segment Control at all — use a [[Chip]] row, where a removable `✕` per chip is legitimate.
 
 ---
 
