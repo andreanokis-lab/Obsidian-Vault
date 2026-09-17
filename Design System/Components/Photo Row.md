@@ -92,10 +92,30 @@ Reported by engineering 2026-09-17: *"The photo container requires internal padd
 
 ---
 
+## Not this component: the inspection photo grids
+
+Five screens show photos as a **grid of [[Components/Content|Content]] instances** (112pt tile + caption + status badge), not as a strip of bare [[Components/Image|Image]] tiles: `BOL (Done)`, `Inspection Review (Done)`, `Inspection (Splits) (Done)`, `Customer Review`, `Vehicle Details`.
+
+They have the same long-press problem and got the same **`Space/S` vertical inset** treatment on their row containers (2026-09-17), plus `clipsContent` turned **off** on the Vehicle Details `photo grid` wrappers and their `cell` frames — those were clipping their own tiles outright.
+
+Photo Row does **not** cover them — it nests Image, they nest Content. A `Photo Grid` component (Content-based, wrap layout, same insets) is the proper home for that rule. Filed as 📋 Planned in [[Component Status]].
+
+---
+
 ## Screens using it
 
-Applied across the Driver App `DS` page 2026-09-17 — Truck Service · Multiple Photos, Collect Payment (Photo), Receipts ×5 (Add COP/COD, Payment Type, Orders, Category, Take a Photo), Deposit Slip, Claims · Filled Information, Adjustments ×2, Adjustment (Done).
+Applied across the Driver App `DS` page 2026-09-17 — **35 photo containers in ~21 screens**.
 
-Related: [[Components/Image|Image]] · [[Components/File field|File field]] · [[Patterns/Context Menu Pattern|Context Menu Pattern]] · [[Patterns/Camera Capture Flow|Camera Capture Flow]] · [[Patterns/Photo Viewer Pattern|Photo Viewer Pattern]].
+**Photo strips (2–3 tiles):** Truck Service · Multiple Photos · Collect Payment (Photo) · Receipts ×5 (Add COP/COD, Payment Type, Orders, Category, Take a Photo) · Deposit Slip · Claims · Filled Information · Adjustments ×2 · Adjustment (Done).
+
+**Single photo tiles** — same rule, a lone tile is still long-pressable: Truck Service · Add Truck Services · Sheet · Photo Actions · Receipts · Accepted Receipt · Receipts · Deleting Image (Long Press).
+
+**Inspection grids** (Content-based, see above): BOL ×2 · Customer Review ×2 · Inspection (Splits) ×6 · Inspection Review ×6 · Vehicle Details ×2.
+
+**Deliberately left alone:**
+- The vertical camera film strips — `Image View` (`1189:31937`) and `Take a photo` (`645:20663`). Different shape, camera context, own decision.
+- The floating photo on `Deleting Image (Long Press) (Done)` (`186:15458`) — that tile is already *in* the lifted state, sitting above the Overlays scrim next to its Menu. It's the preview layer, so nothing clips it.
+
+Related: [[Components/Image|Image]] · [[Components/Content|Content]] · [[Components/File field|File field]] · [[Patterns/Context Menu Pattern|Context Menu Pattern]] · [[Patterns/Camera Capture Flow|Camera Capture Flow]] · [[Patterns/Photo Viewer Pattern|Photo Viewer Pattern]].
 
 Back to [[Design System]] · [[Component Status]].
