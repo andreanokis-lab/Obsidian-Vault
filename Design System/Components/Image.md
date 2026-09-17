@@ -52,7 +52,10 @@ Square or circular image container — used for avatars, photo thumbnails, drive
 - ❌ Don't use Image for icons — use the `Icons/*` set or a sized SVG instead.
 - ❌ Don't override the container size manually — use the right `Size` variant. Custom sizes break alignment.
 - ❌ Don't put text inside the Image container — overlays go in a parent frame above the Image.
+- ❌ Don't add padding here to make room for a context-menu lift. Padding inside Image is *visible* — it shrinks nothing but inflates the gap between tiles from 8 to 24 and grows all ~197 instances (list thumbnails, avatars). The headroom belongs to the container: [[Components/Photo Row|Photo Row]] · [[Rules#L6]].
 
 ---
+
+Used by [[Components/Photo Row|Photo Row]] · [[Components/File field|File field]] · [[Components/Content Row|Content Row]].
 
 Back to [[Design System]] · [[Component Status]].

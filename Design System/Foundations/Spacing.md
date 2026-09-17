@@ -74,6 +74,7 @@ Both margin and gutter alias to `Space/L`, so column metrics shift in lockstep w
 - ✅ `Space/Zero` (0pt) is the **explicit "no spacing / square corners" binding** — don't leave 0 as an inferred default; bind it.
 - ✅ `Space/4XL` (48pt) is the **standard control height** — bind to `height` for buttons, rows, inputs. Not for gaps.
 - ✅ `Space/TapTarget` (44pt) is the **minimum tap target size** (Apple HIG). Bind to `minHeight`/`minWidth` on interactive elements even when content is smaller.
+- ✅ `Space/S` (8pt) is also the **context-menu headroom** — internal padding on a container whose children lift on long-press, so the scale-up isn't clipped. See [[Rules#L6]] · [[Components/Photo Row|Photo Row]].
 
 ## Don't — evidence-based
 
@@ -82,6 +83,7 @@ Both margin and gutter alias to `Space/L`, so column metrics shift in lockstep w
 - ❌ Don't reach for tokens above `Space/4XL` — `Space/5XL`–`Space/12XL` have **zero** production bindings. If you need >48pt of space, justify it before binding.
 - ❌ Don't add new "in-between" tokens. `Space/X` (20pt) is already an off-ladder oddity used only 4 times; the system doesn't need more of those.
 - ❌ Don't assume `Space/M` is only for list rows (old guidance) — in practice it's general-purpose symmetric padding.
+- ❌ Don't solve clipping by padding the *element* — pad the container. Padding inside a tile or thumbnail is visible space: it inflates sibling gaps and follows the component into every other screen that uses it.
 - ❌ Don't delete `Space/X` (20pt) without first scanning the consumer file. It's used in 4 Driver App bindings.
 
 ---

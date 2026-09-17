@@ -62,6 +62,7 @@ Built components in the UIKit library. Status overview: [[Component Status]].
 | [[Components/Tab Bar\|Tab Bar]] | iOS bottom tab bar, 3 Selected variants |
 | [[Components/Sidebar\|Sidebar]] | Right-edge slide-in drawer with scrim |
 | [[Components/Toast\|Toast]] | 4 Message variants — Success, Error, Warning, Info |
+| [[Components/Photo Row\|Photo Row]] | Full-bleed photo strip, Tile=M/L — context-menu headroom (unpublished) |
 | [[Components/Components - In Progress\|In Progress]] | Camera component build plan |
 
 ---

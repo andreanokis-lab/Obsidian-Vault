@@ -86,7 +86,18 @@ The menu is **anchored to the trigger**, not the screen. It never occupies the f
 | Overflow button | [[Button]] · `Icon Only=true` · `Type=Ghost` (⋯ or ⋮) | Row-level actions on a card / list row — the trigger's job is only to open the menu |
 | More icon on a Navigation Bar | [[Navigation Bar]] trailing button | Screen-level overflow (rare — prefer explicit actions in the bar) |
 
-Every menu **must have a visible, tappable trigger**. Never open a Context Menu from a long-press only — that's a [[Sheet Pattern|Sheet]] or an [[Action Picker Pattern|Action Picker]].
+Every menu built from [[Select]] + [[Menu]] **must have a visible, tappable trigger** — that's what separates this pattern from a [[Sheet Pattern|Sheet]] or an [[Action Picker Pattern|Action Picker]].
+
+> **Amended 2026-09-17.** This rule previously read *"Never open a Context Menu from a long-press only."* That is wrong as an absolute, and the shipped designs already contradict it: the Receipts screens carry the caption **"Press and hold the image to remove it."**, and the Truck Service section ships `Long Press (Deleting) (Done)` (`254:39240`) and `Photo Actions (Done)` (`250:38053`). Long-press context menus on **content objects** — a photo tile, a list row — are native iOS behaviour and are in the product.
+>
+> The distinction that actually holds:
+>
+> | Opening a menu on… | Rule |
+> |---|---|
+> | A **control** (filter, sort, status, mode) | Needs a visible [[Select]] trigger. A long-press-only control is undiscoverable. |
+> | A **content object** (photo, row, card) | Long-press is the correct and expected gesture — it's the native iOS context menu. The object itself is the trigger. |
+>
+> A long-press menu on a content object still obeys the 1–4 row ceiling below, and the object it lifts from needs `Space/S` of headroom inside its container so the lift isn't clipped — see [[Rules#L6]] and [[Components/Photo Row|Photo Row]].
 
 ---
 
@@ -148,7 +159,7 @@ Any of these that currently exposes 5 or more rows should be migrated to the [[A
 - ❌ Don't put multi-line content, avatars, or helper text in [[Menu Item|Menu Items]] — they're single-line rows.
 - ❌ Don't stack two destructive rows.
 - ❌ Don't add a Cancel row — dismissal is tap-outside; Cancel belongs to [[Action Picker Pattern|Action Pickers]].
-- ❌ Don't open a menu without a visible trigger the user can point to.
+- ❌ Don't open a menu on a **control** without a visible trigger the user can point to. (A long-press menu on a **content object** — photo, row, card — is fine; that's the native iOS gesture.)
 - ❌ Don't fill all 12 [[Menu]] slots just because the component allows it — the pattern ceiling is 4.
 
 ---

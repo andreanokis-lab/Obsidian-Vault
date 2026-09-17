@@ -58,6 +58,11 @@ Never place interactive elements behind the Dynamic Island or home indicator.
 **L5. Primary actions belong in the lower third of the screen.**
 One-handed reachability. Put your most important CTA where a thumb can reach it without repositioning the phone.
 
+**L6. An element that lifts on long-press needs headroom inside its container.**
+iOS scales a view up (~1.05–1.1×) when it presents a context menu. If the container clips (`clipsToBounds`, any scroll view) and the element sits flush against its bounds, the lift is cut off. Reserve `Space/S` (8pt) of internal padding on every edge the element can grow toward — 8pt covers a lift to ~1.18× on an 88pt tile.
+
+The padding belongs to the **container**, never to the element: padding inside the element is visible, inflates the gaps between siblings, and changes every other place that element is used. Worked example and the full contract: [[Components/Photo Row|Photo Row]].
+
 ---
 
 ## C — Component Rules

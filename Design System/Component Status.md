@@ -60,6 +60,7 @@ Single source of truth for what exists in the HaulEx UIKit library. Check this b
 | List | ✅ Built | `944:4339` | 2 Views (List, Preview Row). Generic list row with Row Text + Trailing slot. See [[Components/List\|List]]. |
 | Content Row | ✅ Built | `1008:3542` | 7 variants × Receipts/Trackshop/Adj./Truck Service/Deposit slip with Long Press states. See [[Components/Content Row\|Content Row]]. |
 | List / Grid | ✅ Built | `939:4248` | Card-style grid tile with image + title + helper + progress. See [[Components/List Grid\|List / Grid]]. |
+| Photo Row | 🔄 In Progress | `2259:4198` | 2 Tile variants (M 88pt / L 112pt). Full-bleed photo strip — `Space/L` horizontal + `Space/S` vertical insets carry the iOS context-menu lift headroom ([[Rules#L6]]). **Built in Figma 2026-09-17, not yet published to the library** — screens still use hand-built rows until it ships. See [[Components/Photo Row\|Photo Row]]. |
 | Leaderboard Row | ✅ Built | `1297:250` | Rank + avatar + name + stats. For positions 4+. See [[Components/Leaderboard Row\|Leaderboard Row]]. |
 | File field | ✅ Built | `960:4667` | Thumbnail + filename + helper. For uploads / attachments. See [[Components/File field\|File field]]. |
 | Info row | ✅ Built | `342:4031` | Inline label with leading + trailing icons. Used inside Cards. See [[Components/Info row\|Info row]]. |
