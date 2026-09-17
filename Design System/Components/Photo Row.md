@@ -7,7 +7,7 @@ Its reason to exist is **interaction headroom**, not layout: a photo tile scales
 - **Component set node:** `2259:4198`
 - **Figma file:** [HaulEx UIKit](https://www.figma.com/design/3qOFF7kHsaZPfdftDb1CVz/HaulEx-UIKit?node-id=2259-4198)
 - **Figma section:** `Photo Row — Documentation` (`2259:4111`) on `----- Image Content`
-- **Status:** built, **not yet published to the library** — see [[Component Status]]
+- **Status:** ✅ built & published — **16 live instances** in the Driver App (2026-09-17). See [[Component Status]].
 
 ---
 
@@ -25,8 +25,8 @@ The asymmetric padding is deliberate:
 
 | Edge | Token | Why |
 |---|---|---|
-| Leading / trailing | `Space/L` (16) | doubles as the screen margin — the first tile still lands on the 16pt grid ([[Rules#L2]]) while the scroll container runs edge to edge |
-| Top / bottom | `Space/S` (8) | pure headroom — 8pt covers a lift to ~1.18× on an 88pt tile, ~1.14× on a 112pt tile; iOS uses ~1.05–1.1× |
+| Leading / trailing (`Inset=Screen`) | `Space/L` (16) | doubles as the screen margin — the first tile still lands on the 16pt grid ([[Rules#L2]]) while the scroll container runs edge to edge |
+| Top / bottom | `Space/S` (8) | pure headroom — absorbs a lift up to ~1.18× on an 88pt tile, ~1.14× on a 112pt tile. Apple publishes no lift factor, so this is a DS-chosen margin, not an HIG number ([[Rules#L6]]) |
 
 ---
 
@@ -34,9 +34,12 @@ The asymmetric padding is deliberate:
 
 | Axis | Values | Notes |
 |---|---|---|
-| `Tile` | `M` (88pt tiles, row 393×104) · `L` (112pt tiles, row 393×128) | Matches the two [[Components/Image\|Image]] sizes used for photo thumbnails |
+| `Tile` | `M` (88pt tiles) · `L` (112pt tiles) | Matches the two [[Components/Image\|Image]] sizes used for photo thumbnails |
+| `Inset` | `Screen` · `Column` | **Where the row lives.** `Screen` = full-bleed, 393 wide, `Space/L` leading/trailing. `Column` = inside the 361pt content column, hug width, **no** horizontal padding — the column's own 16pt margin already does that job. |
 
-2 variants. There is no `S` variant — 56pt tiles are list-row thumbnails, not photo strips.
+4 variants. There is no `S` variant — 56pt tiles are list-row thumbnails, not photo strips.
+
+Pick `Inset` by asking where the row sits: directly under the nav bar, free of the content column → `Screen`; nested in a form column or bound to a caption → `Column`. Getting it wrong shows immediately — `Screen` inside the column pushes tiles to 32pt, `Column` at screen level pulls them to 0.
 
 ---
 
@@ -92,6 +95,23 @@ Reported by engineering 2026-09-17: *"The photo container requires internal padd
 
 ---
 
+## Known gaps vs reference / HIG
+
+- **No HIG basis for the 8pt.** Apple's HIG covers context menus qualitatively — system gesture, shows a preview of the item — and specifies nothing about how far the preview lifts or how containers should reserve room. The inset here is derived from the `Space/*` ladder and from the engineering report, not from Apple. Checked 2026-09-17.
+- **HIG rules this component does satisfy:** 44pt minimum touch target (tiles are 88/112pt), `Space/L` screen margin preserved in both `Inset` modes, and "leverage system gestures, don't reinvent them" — long-press on a content object is the system gesture, which is also why [[Patterns/Context Menu Pattern|Context Menu Pattern]] was amended.
+- **No add-tile type option.** The add affordance is hardcoded as an [[Components/Image|Image]] with `Placeholder=true`. `Claims · Filled Information` uses a [[Components/Button|Button]] (`Type=Tile, Icon Only`) instead and therefore could not be swapped.
+- **375pt width — checked 2026-09-17 ([[Rules#L3]]).** `Inset=Screen` instances are set to `Width=Fill`, so they track the screen down to 375pt. `Tile=L` is the constraint: three 112pt tiles + two 8pt gaps = 352pt against 343pt of available column at 375pt, so the third tile falls off-screen on an iPhone SE / mini. That is **correct for a scroll strip** — the row scrolls and the clipped third tile is the scroll affordance — but it only works if engineering actually implements the horizontal ScrollView in the Code contract above. If a screen renders this row as a static stack, it breaks at 375pt. The Figma frames are 393pt so the overflow is invisible in the mock.
+- **Not validated in Dark mode** — the instances inherit semantic tokens so no drift is expected, but it hasn't been eyeballed ([[Rules]] QA checklist).
+
+## Follow-ups
+
+- [ ] Add an add-tile type option (Image placeholder / Button tile) so `Claims · Filled Information` can be swapped.
+- [ ] Build `Photo Grid` for the Content-based inspection grids — they carry the insets by hand today ([[Component Status]]).
+- [ ] Ask engineering for the measured lift factor and replace the estimate in [[Rules#L6]].
+- [ ] Re-publish the UIKit library — the `componentPropertyReferences` wiring on the `Inset=Column` variants was repaired after the first publish.
+- [ ] QA the 16 instances in Dark mode.
+- [ ] Confirm with engineering that every `Tile=L` row is a real horizontal ScrollView — it overflows by 9pt at 375pt width and depends on scrolling to degrade correctly.
+
 ## Not this component: the inspection photo grids
 
 Five screens show photos as a **grid of [[Components/Content|Content]] instances** (112pt tile + caption + status badge), not as a strip of bare [[Components/Image|Image]] tiles: `BOL (Done)`, `Inspection Review (Done)`, `Inspection (Splits) (Done)`, `Customer Review`, `Vehicle Details`.
@@ -111,6 +131,8 @@ Applied across the Driver App `DS` page 2026-09-17 — **35 photo containers in 
 **Single photo tiles** — same rule, a lone tile is still long-pressable: Truck Service · Add Truck Services · Sheet · Photo Actions · Receipts · Accepted Receipt · Receipts · Deleting Image (Long Press).
 
 **Inspection grids** (Content-based, see above): BOL ×2 · Customer Review ×2 · Inspection (Splits) ×6 · Inspection Review ×6 · Vehicle Details ×2.
+
+**Not swapped — `Claims · Filled Information` (`206:21776`).** Its add affordance is a [[Components/Button|Button]] (`Type=Tile, Icon Only`), not an Image placeholder, and Photo Row only models an Image-based add tile. Swapping would silently replace a Button with a camera tile, so that row keeps the headroom insets by hand. Decided 2026-09-17 — fixing it properly means an add-tile type option on this component; file it before the next photo screen is built.
 
 **Deliberately left alone:**
 - The vertical camera film strips — `Image View` (`1189:31937`) and `Take a photo` (`645:20663`). Different shape, camera context, own decision.

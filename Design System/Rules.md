@@ -59,7 +59,9 @@ Never place interactive elements behind the Dynamic Island or home indicator.
 One-handed reachability. Put your most important CTA where a thumb can reach it without repositioning the phone.
 
 **L6. An element that lifts on long-press needs headroom inside its container.**
-iOS scales a view up (~1.05–1.1×) when it presents a context menu. If the container clips (`clipsToBounds`, any scroll view) and the element sits flush against its bounds, the lift is cut off. Reserve `Space/S` (8pt) of internal padding on every edge the element can grow toward — 8pt covers a lift to ~1.18× on an 88pt tile.
+iOS lifts and scales the view when it presents a context menu. If the container clips (`clipsToBounds`, any scroll view) and the element sits flush against its bounds, the lift is cut off — a reported bug on the Driver App's photo tiles, not a theoretical one. Reserve `Space/S` (8pt) of internal padding on every edge the element can grow toward; on an 88pt tile that absorbs growth up to ~1.18×, on 112pt up to ~1.14×.
+
+**Apple publishes no scale factor for this** — the HIG covers context menus qualitatively (system gesture, shows a preview of the item) and says nothing about lift geometry or clipping. The 8pt is a design-system safety margin chosen off the `Space/*` ladder, not an HIG number. If engineering measures the real factor, update this rule with it.
 
 The padding belongs to the **container**, never to the element: padding inside the element is visible, inflates the gaps between siblings, and changes every other place that element is used. Worked example and the full contract: [[Components/Photo Row|Photo Row]].
 
